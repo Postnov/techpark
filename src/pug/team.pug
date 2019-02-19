@@ -1,0 +1,63 @@
+doctype html
+html(lang="ru")
+	include partails/head.pug
+	body
+
+		include partails/header.pug
+
+		.inner-top
+			img.inner-top__img(src="images/inner-top-img.png" alt="")
+
+		.page
+			.page__container.page__container--inner.container
+				.page__content
+					.page__header.page-header
+						.page-header__breadcrumbs.page-breadcrumbs
+							ul
+								li
+									a(href='#') Главная
+								li
+									a(href='#') О технопарке
+								li
+									span Команда
+						.page-header__content
+							.page-header__subtitle Технопарк высоких технологий Свердловской области
+							.page-header__title Команда
+
+
+
+					.text-block
+						h3 Административный отдел
+
+					.team.team--3
+						ul.team__list
+							each i in [1,2,1]
+								li.team__item.worker.text-center
+									.worker__img-wrapp
+										img.worker__img(src="images/team-img-"+i+".png" alt="")
+									.worker__name Марина Аросланкина
+									.worker__position Начальник отдела по работе с резидентами
+									.worker__contacts
+										a.worker__phone(href="tel:89122492347") +7 (912) 24 92 347
+										a.worker__email(href="mailto:amv@uralhitech.ru ") amv@uralhitech.ru
+
+
+					.mt-7
+						h3 Отдел по связям с общественностью
+						.team.team--3
+							ul.team__list
+								each i in [1]
+									li.team__item.worker.text-center
+										.worker__img-wrapp
+											img.worker__img(src="images/team-img-"+i+".png" alt="")
+										.worker__name Марина Аросланкина
+										.worker__position Начальник отдела по работе с резидентами
+										.worker__contacts
+											a.worker__phone(href="tel:89122492347") +7 (912) 24 92 347
+											a.worker__email(href="mailto:amv@uralhitech.ru ") amv@uralhitech.ru
+
+
+				include partails/sidebar-2.pug
+
+		include partails/footer.pug
+		include partails/scripts.pug

@@ -1,0 +1,68 @@
+.grid-features {
+    .svg-icon-meetings {
+        width: 46px;
+        height: 75px;
+    }
+    .svg-icon-possibility {
+        width: 60px;
+        height: 60px;
+    }
+    .svg-icon-rocket {
+        width: 49px;
+        height: 49px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        padding-left: 0;
+        list-style: none;
+        margin: 0;
+    }
+
+    &__img-wrapp {
+        height: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include _480 {
+            height: 100px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 33%;
+        margin-bottom: 20px;
+
+        &:not(:nth-child(3n)) {
+            border-right: 1px solid #ecf0fb;
+        }
+
+        @include _480 {
+            width: 100%;
+            text-align: center;
+
+
+            &:not(:nth-child(3n)) {
+                border-right: none;
+            }
+        }
+
+
+        p {
+
+            color: #34244d;
+            font-size: 16px;
+            line-height: 1.25;
+            max-width: 210px;
+        }
+    }
+}

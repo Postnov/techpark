@@ -1,0 +1,95 @@
+doctype html
+html(lang="ru")
+	include partails/head.pug
+	body
+
+		include partails/header.pug
+
+		.inner-top
+			img.inner-top__img(src="images/inner-top-img.png" alt="")
+
+		.page.page--bg-white
+			.page__container.page__container--inner.container
+				.page__content
+					.page__header.page-header.page-header--inline
+						.page-header__breadcrumbs.page-breadcrumbs
+							ul
+								li
+									a(href='#') Главная
+								li
+									a(href="#") Пресс-центр
+								li
+									span Видео
+						.page-header__content
+							.page-header__subtitle Технопарк высоких технологий Свердловской области
+							.page-header__title Все видео
+
+
+					.page-filters
+						.page-filters__left
+							.page-filters__label За период:
+							select.page-filters__select.mr-1
+								option Вариант 1
+								option Вариант 2
+								option Вариант 3
+
+							select.page-filters__select.mr-1
+								option 2018
+								option 2017
+								option 2016
+							button.page-filters__btn.btn
+								span.btn__inner Показать
+
+						.page-filters__right
+							.page-filters__label Тема:
+							select.page-filters__select
+								option Все новости
+								option Проведенные мероприятия
+								option Ближайшие мероприятия
+								option Презентации
+								option Инновации
+
+
+
+
+			.videos.search__videos.videos--bg-purple
+				.container
+					ul.videos__list
+						each i in [1,2,1,2,1,2,1,2,1]
+							li.videos__item.video
+								img.video__img(src="images/video-img-"+i+".png", alt="")
+								a.video__play-icon(data-fancybox href="https://www.youtube.com/watch?v=-5JVZqXvMy0") Смотреть
+								.video__content
+									.video__tags
+										a(href="#") #IT
+										a(href="#") #Навигатор
+
+									.video__panel
+										.video__text Технопарк: новое видео о конференции
+										.video__info
+											.video__date 13 ноября 2018
+											.video__time 30:14
+
+			.pagination.container
+				a(href='#').pagination__arrow
+					svg
+						use(xlink:href="#2--arrow_left")
+				ul.pagination__list
+					li.pagination__item.is-current
+						span.pagination__link 1
+					li.pagination__item
+						span.pagination__link 2
+					li.pagination__item
+						span.pagination__link 3
+					li.pagination__item
+						span.pagination__link ...
+					li.pagination__item
+						span.pagination__link 12
+				a(href='#').pagination__arrow
+					svg
+						use(xlink:href="#2--arrow_right")
+
+
+
+		include partails/footer.pug
+		include partails/scripts.pug

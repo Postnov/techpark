@@ -1,13 +1,425 @@
 doctype html
 html(lang="ru")
-    include partails/head.pug
-    body
+	include partails/head.pug
+	body
 
-        .header
-            h1.header__title Header
-            img.header__img(src="", alt="")
-            li
-                a.header__link link
+		include partails/header.pug
 
 
-        include partails/footer.pug
+		main.page-main(role="main")
+			section.banner(height="100vh")
+				.banner__slider-list.slider-for
+					.banner__slide(style="background-image: transparent" data-parallax="scroll" data-bleed="10" data-speed="0.2" data-image-src="images/banner-slide-1.jpg")
+						.container
+							.row
+								.col-lg-6.col-md-8
+									.about-slide
+										.about-slide__title-top
+											span Технопарк
+											| высоких технологий Свердловской области
+										.about-slide__title-bottom
+											| ... место где рождаются инновации
+										.about-slide__wrapper-button
+											a.about-slide__button-more(href="#")
+												span Узнать больше
+											a.about-slide__button-video(data-fancybox href="https://www.youtube.com/watch?v=-5JVZqXvMy0")
+												span Смотреть видео
+												svg.svg.svg-button-play
+													use(xlink:href="#svg-icon-button-play")
+					.banner__slide(style="background-image: transparent" data-parallax="scroll" data-bleed="10" data-speed="0.2" data-image-src="images/banner-slide-2.jpg")
+						.container
+							.row
+								.col-lg-6.col-md-8
+									.about-slide
+										.about-slide__title-top
+											span Технопарк
+											| высоких технологий Свердловской области
+										.about-slide__title-bottom
+											| ... место где рождаются инновации
+										.about-slide__wrapper-button
+											a.about-slide__button-more(href="#")
+												span Узнать больше
+											a.about-slide__button-video(href="#" data-toggle="modal" data-target="#video-modal")
+												span Смотреть видео
+												svg.svg.svg-button-play
+													use(xlink:href="#svg-icon-button-play")
+					.banner__slide(style="background-image: transparent" data-parallax="scroll" data-bleed="10" data-speed="0.2" data-image-src="images/banner-slide-3.jpg")
+						.container
+							.row
+								.col-lg-6.col-md-8
+									.about-slide
+										.about-slide__title-top
+											span Технопарк
+											| высоких технологий Свердловской области
+										.about-slide__title-bottom
+											| ... место где рождаются инновации
+										.about-slide__wrapper-button
+											a.about-slide__button-more(href="#")
+												span Узнать больше
+											a.about-slide__button-video(href="#" data-toggle="modal" data-target="#video-modal")
+												span Смотреть видео
+												svg.svg.svg-button-play
+													use(xlink:href="#svg-icon-button-play")
+					.banner__slide(style="background-image: transparent" data-parallax="scroll" data-bleed="10" data-speed="0.2" data-image-src="images/banner-slide-4.jpg")
+						.container
+							.row
+								.col-lg-6.col-md-8
+									.about-slide
+										.about-slide__title-top
+											span Технопарк
+											| высоких технологий Свердловской области
+										.about-slide__title-bottom
+											| ... место где рождаются инновации
+										.about-slide__wrapper-button
+											a.about-slide__button-more(href="#")
+												span Узнать больше
+											a.about-slide__button-video(href="#" data-toggle="modal" data-target="#video-modal")
+												span Смотреть видео
+												svg.svg.svg-button-play
+													use(xlink:href="#svg-icon-button-play")
+				.banner__slider-nav.slider-nav
+					.banner__nav-item.banner__nav-item_active
+						img(src="images/nav-slide-1.jpg" width="145" height="78" alt="")
+						.border
+					.banner__nav-item
+						img(src="images/nav-slide-2.jpg" width="145" height="78" alt="")
+						.border
+					.banner__nav-item
+						img(src="images/nav-slide-3.jpg" width="145" height="78" alt="")
+						.border
+					.banner__nav-item
+						img(src="images/nav-slide-4.jpg" width="145" height="78" alt="")
+						.border
+			section.about-work
+				.about-work__header
+					svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 102.2 99.33")
+						path.a1(d="M53.13,53.15,101.35,4.94A2.9,2.9,0,0,0,97.25.85L51.1,47,5,.85A2.91,2.91,0,0,0,0,2.89a2.83,2.83,0,0,0,.86,2L49.07,53.13a2.87,2.87,0,0,0,4.06,0Z")
+						path.a2(d="M53.13,98.5l48.22-48.21a2.9,2.9,0,0,0-4.1-4.09L51.1,92.35,5,46.2a2.91,2.91,0,0,0-4.95,2,2.83,2.83,0,0,0,.86,2L49.07,98.48a2.87,2.87,0,0,0,4.06,0Z")
+					span
+						| Технопарк высоких технологий Свердловской области является региональным оператором Фонда «Сколково».
+
+
+
+				.about-work__content.about-work__content_active(style="display: block")
+					.container
+						.about-work__title
+							| Для кого мы работаем
+						.about-work__tab-list
+							.about-work__progress-bar
+								.about-work__progress-line
+							.row
+								.col-md-2
+									.about-work__tab-link.about-work__tab-link_active
+										| Есть идея
+										.about-work__icon
+											svg(width="23" height="32")
+												use(xlink:href="#30--idea_small")
+										.about-work__tab-content
+											.row
+												.col-md-4
+													.about-work__tab-image
+														svg(width="112" height="93")
+															use(xlink:href="#30--idea")
+												.col-md-8
+													.about-work__tab-title
+														| У вас есть идея  —
+													.about-work__tab-text
+														| Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, numquam.
+								.col-md-2
+									.about-work__tab-link
+										| Провожу
+										br
+										| исследования
+										.about-work__icon
+											svg(width="25" height="33")
+												use(xlink:href="#30--research_small")
+										.about-work__tab-content
+											.row
+												.col-md-4
+													.about-work__tab-image
+														svg(width="112" height="93")
+															use(xlink:href="#30--research")
+												.col-md-8
+													.about-work__tab-title
+														| Провожу исследования  —
+													.about-work__tab-text
+														| Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis obcaecati rem, dolores necessitatibus optio similique?
+								.col-md-2
+									.about-work__tab-link
+										| Есть прототип
+										.about-work__icon
+											svg(width="35" height="30")
+												use(xlink:href="#30--prototype_small")
+										.about-work__tab-content
+											.row
+												.col-md-4
+													.about-work__tab-image
+														svg(width="112" height="93")
+															use(xlink:href="#30--prototype")
+												.col-md-8
+													.about-work__tab-title
+														| У вас есть прототип  —
+													.about-work__tab-text
+														| Поможем  с первыми внедрениями и промышленными испытаниями, а также разработаем  конструкторскую документацию и поможем организовать мелкосерийное  производство.
+								.col-md-2
+									.about-work__tab-link
+										| Есть продукт
+										.about-work__icon
+											svg(width="21" height="30")
+												use(xlink:href="#30--product_small")
+										.about-work__tab-content
+											.row
+												.col-md-4
+													.about-work__tab-image
+														svg(width="112" height="93")
+															use(xlink:href="#30--prototype")
+												.col-md-8
+													.about-work__tab-title
+														| У вас есть продукт  —
+													.about-work__tab-text
+														| Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore necessitatibus rem dolores aspernatur reiciendis natus? Quis quidem sed asperiores dolorum! Modi odio quibusdam, officia ullam ab enim sit saepe beatae?
+								.col-md-2
+									.about-work__tab-link
+										| Произвожу
+										br
+										| мелкую серию
+										.about-work__icon
+											svg(width="33" height="33")
+												use(xlink:href="#30--sery_small")
+										.about-work__tab-content
+											.row
+												.col-md-4
+													.about-work__tab-image
+														svg(width="112" height="93")
+															use(xlink:href="#30--sery")
+												.col-md-8
+													.about-work__tab-title
+														| Произвожу мелкую серию  —
+													.about-work__tab-text
+														| Lorem ipsum dolor sit amet consectetur adipisicing.
+								.col-md-2
+									.about-work__tab-link
+										| Запускаю
+										br
+										| серийное
+										br
+										| производство
+										.about-work__icon
+											svg(width="32" height="32")
+												use(xlink:href="#30--fabric_small")
+										.about-work__tab-content
+											.row
+												.col-md-4
+													.about-work__tab-image
+														svg(width="112" height="93")
+															use(xlink:href="#30--fabric")
+												.col-md-8
+													.about-work__tab-title
+														| Запускаю серийное производство  —
+													.about-work__tab-text
+														| Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quas quis! Molestias.
+			section.services
+				.container
+					.services__preface
+						| Технопарк высоких технологий Свердловской области
+					.services__title
+						| Услуги и компетенции
+					.services__wrapper-nav
+						ul.nav.nav-tabs.row.justify-content-lg-center.justify-content-around(role="tablist")
+							li.nav-item.col-lg-3.col-4
+								a.nav-link.active(data-toggle="tab" href="#services1" role="tab")
+									| Специализированные
+									img(src="images/services-1.png" width="38" height="36" alt="")
+							li.nav-item.col-lg-3.col-4
+								a.nav-link(data-toggle="tab" href="#services2" role="tab")
+									| Организационные
+									img(src="images/services-2.png" width="41" height="30" alt="")
+							li.nav-item.col-lg-3.col-4
+								a.nav-link(data-toggle="tab" href="#services3" role="tab")
+									| Консультационные
+									img(src="images/services-3.png" width="31" height="31" alt="")
+					.tab-content
+						#services1.tab-pane.fade.active.show(role="tabpanel")
+							.row
+								.col-md-6.mb-md-0
+									.services__item.services__item--main-page
+										.services__item-image
+											img(src="images/services-center.png" alt="")
+										.services__item-title
+											| Инжиниринговый центр
+										.services__item-description
+											| Это центр компьютерного инжиниринга, направленный на решение производственных задач, связанных с разработкой или оптимизацией существующих изделий, технологических процессов на основе задания Заказчика.
+										.services__wrap-button
+											a.services__button
+												span Узнать больше
+												svg.svg.svg-question
+													use(xlink:href="#svg-icon-question")
+								.col-md-6
+									.services__item.services__item--main-page
+										.services__item-image
+											img(src="images/services-center.png" alt="")
+										.services__item-title
+											| Центр поддержки инноваций
+										.services__item-description
+											| Региональный центр поддержки инноваций является элементом инновационной инфраструктуры Свердловской области и осуществляет свою деятельность в интересах инновационных предприятий и организаций региона, а также региональных институтов развития и инновационных территориальных кластеров.
+										.services__wrap-button
+											a.services__button
+												span Узнать больше
+												svg.svg.svg-question
+													use(xlink:href="#svg-icon-question")
+						#services2.tab-pane.fade(role="tabpanel")
+							.row
+								.col-md-6.mb-md-0
+									.services__item.services__item--main-page
+										.services__item-image
+											img(src="images/services-center.png" alt="")
+										.services__item-title
+											| Инжиниринговый центр2
+										.services__item-description
+											| Это центр компьютерного инжиниринга, направленный на решение производственных задач, связанных с разработкой или оптимизацией существующих изделий, технологических процессов на основе задания Заказчика.
+										.services__wrap-button
+											a.services__button
+												| Узнать больше
+												svg.svg.svg-question
+													use(xlink:href="#svg-icon-question")
+								.col-md-6
+									.services__item.services__item--main-page
+										.services__item-image
+											img(src="images/services-center.png" alt="")
+										.services__item-title
+											| Центр поддержки инноваций2
+										.services__item-description
+											| Региональный центр поддержки инноваций является элементом инновационной инфраструктуры Свердловской области и осуществляет свою деятельность в интересах инновационных предприятий и организаций региона, а также региональных институтов развития и инновационных территориальных кластеров.
+										.services__wrap-button
+											a.services__button
+												| Узнать больше
+												svg.svg.svg-question
+													use(xlink:href="#svg-icon-question")
+						#services3.tab-pane.fade(role="tabpanel")
+							.row
+								.col-md-6.mb-md-0
+									.services__item.services__item--main-page
+										.services__item-image
+											img(src="images/services-center.png" alt="")
+										.services__item-title
+											| Инжиниринговый центр3
+										.services__item-description
+											| Это центр компьютерного инжиниринга, направленный на решение производственных задач, связанных с разработкой или оптимизацией существующих изделий, технологических процессов на основе задания Заказчика.
+										.services__wrap-button
+											a.services__button
+												| Узнать больше
+												svg.svg.svg-question
+													use(xlink:href="#svg-icon-question")
+								.col-md-6
+									.services__item.services__item--main-page
+										.services__item-image
+											img(src="images/services-center.png" alt="")
+										.services__item-title
+											| Центр поддержки инноваций3
+										.services__item-description
+											| Региональный центр поддержки инноваций является элементом инновационной инфраструктуры Свердловской области и осуществляет свою деятельность в интересах инновационных предприятий и организаций региона, а также региональных институтов развития и инновационных территориальных кластеров.
+										.services__wrap-button
+											a.services__button
+												| Узнать больше
+												svg.svg.svg-question
+													use(xlink:href="#svg-icon-question")
+			section.developments
+				.container
+					.row
+						.col-lg-6
+							.developments__welcome
+								.developments__img-block
+									svg.developments__lamp-icon
+										use(xlink:href="#29--lamp")
+									svg.developments__case-icon
+										use(xlink:href="#29--case")
+
+								.developments__title
+									| Календарь
+									br
+									| мероприятий
+								.developments__text
+									p В Технопарке постоянно проводятся мероприятия различной направленности.
+									p Узнайте больше о предстоящих событиях!
+								a.developments__button
+									span Узнать об условиях проведения мероприятий
+						.col-lg-6
+							.soon
+								.soon__title
+									| Ближайшие события
+								.soon__list
+									.soon__item
+										.soon__image
+											img(src="images/soon-1.png" alt="")
+										.soon__content
+											.soon__date
+												| 23 августа 2018
+											.soon__text
+												| Технопарк станет площадкой для проведения масштабного проекта ок!нано-тур при поддержке ФИОП РОСНАНО
+									.soon__item
+										.soon__image
+											img(src="images/soon-2.png" alt="")
+										.soon__content
+											.soon__date
+												| 23 октября 2018
+											.soon__text
+												| Специальное мероприятие для продвинутых пользователей программного обеспечения FireCat: Pyrosim, Pathfinder, FireRisk.
+									.soon__item
+										.soon__image
+											img(src="images/soon-3.png" alt="")
+										.soon__content
+											.soon__date
+												| 3 ноября 2018
+											.soon__text
+												| Семинар-практикум по независимой оценке квалификаций «Оценка квалификации. Траектория профессионального роста».
+								a.soon__calendar Посмотреть календарь мероприятий
+			section.news
+				.container
+					.news__title Новости Технопарка
+					.news__list
+						.row
+							.col-md-4
+								a.news__item(href="#")
+									.news__image
+										img(src="images/news-1.jpg" width="360" height="300" alt="")
+									.news__content
+										.news__hashtag  #Новости
+										.news__description
+											.news__date  3 ноября 2018
+											.news__title-news  Десант сколково в технопарке «Университетском»
+											.news__text
+												| Остается чуть более трех суток для регистрации желающих участвовать в Школе «Навигатор инноватора». Мероприятие организовано Фондом Сколково, Открытым университетом Сколково и Технопарком «Университетский». Регистрация производится на сайте Открытого университета Сколково.
+											.news__details  Подробнее
+							.col-md-4
+								a.news__item(href="#")
+									.news__image
+										img(src="images/news-2.jpg" width="360" height="300" alt="")
+									.news__content
+										.news__hashtag  #Новости
+										.news__description
+											.news__date  3 ноября 2018
+											.news__title-news  Университетский — среди азиатских коллег
+											.news__text
+												| Остается чуть более трех суток для регистрации желающих участвовать в Школе «Навигатор инноватора». Мероприятие организовано Фондом Сколково, Открытым университетом Сколково и Технопарком «Университетский». Регистрация производится на сайте Открытого университета Сколково.
+											.news__details  Подробнее
+							.col-md-4
+								a.news__item(href="#")
+									.news__image
+										img(src="images/news-3.jpg" width="360" height="300" alt="")
+									.news__content
+										.news__hashtag  #Новости
+										.news__description
+											.news__date  3 ноября 2018
+											.news__title-news  Наши беспилотники взлетят в Китае?
+											.news__text
+												| Остается чуть более трех суток для регистрации желающих участвовать в Школе «Навигатор инноватора». Мероприятие организовано Фондом Сколково, Открытым университетом Сколково и Технопарком «Университетский». Регистрация производится на сайте Открытого университета Сколково.
+											.news__details  Подробнее
+					a.news__button
+						span Все новости
+
+
+
+
+
+		include partails/footer.pug
+		include partails/scripts.pug

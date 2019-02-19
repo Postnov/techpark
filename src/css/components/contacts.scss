@@ -1,0 +1,67 @@
+.contacts {
+    &__feedback {
+        padding: 102px 0 120px;
+
+        @include _768 {
+            padding: 50px 0 60px;
+        }
+    }
+}
+
+.contacts-map {
+    height: 400px;
+    width: 100%;
+}
+
+.contacts-address {
+    margin-top: 60px;
+    &__item {
+        margin-bottom: 40px;
+    }
+}
+
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    &__icon {
+        margin-right: 20px;
+        fill: url(#workGradient);
+        stroke: url(#workGradient);
+        width: 35px;
+        height: 35px;
+    }
+    &__content {}
+    &__title {
+        color: #666666;
+        font-size: 15px;
+        line-height: 1;
+        margin-bottom: 8px;
+    }
+
+    &__link {
+        color: #1a1a1a;
+        font-size: 18px;
+        line-height: 1;
+    }
+}
+
+
+.how-to-get {
+    &__title {
+        font-size: 24px;
+    }
+
+    .dropdown-block__container {
+        margin: 15px 0;
+        color: #666;
+        font-size: 15px;
+    }
+
+    .dropdown-block {
+        margin-bottom: 35px;
+    }
+}

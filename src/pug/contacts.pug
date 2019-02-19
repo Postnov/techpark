@@ -1,0 +1,116 @@
+doctype html
+html(lang="ru")
+	include partails/head.pug
+	body
+
+		include partails/header.pug
+
+		.inner-top
+			img.inner-top__img(src="images/inner-top-img.png" alt="")
+
+		.page.contacts-page
+			.page__container.page__container--inner.container
+				.page__content
+					.page__header.page-header.page-header--inline
+						.page-header__breadcrumbs.page-breadcrumbs
+							ul
+								li
+									a(href='#') Главная
+								li
+									span Контакты
+						.page-header__content
+							.page-header__subtitle Технопарк высоких технологий Свердловской области
+							.page-header__title Контакты Технопарка
+
+
+
+
+					.contacts-address.row
+						.col-sm-6.col-xs-12
+							each i in ['pin','mail','clock', 'phone']
+								.contacts-address__item.contact
+									svg.contact__icon
+										use(xlink:href="#28--"+i)
+									.contact__content
+										p.contact__title Адрес:
+										a.contact__link(href="#") Екатеринбург, Конструкторов 5
+						.col-sm-6.col-xs-12
+							.how-to-get
+								h3.how-to-get__title Как добраться
+								.how-to-get__list
+									each item in ['На автомобиле', 'На автобусе', 'На маршрутке']
+										.dropdown-block.js-dropdown-block
+											.dropdown-block__trigger.js-dropdown-trigger
+												.dropdown-block__link=item
+												svg.dropdown-block__arrow.js-dropdown-arrow(enable-background="new 0 0 314.5 314.5" version="1.1" viewbox="0 0 314.5 314.5" xml:space="preserve" xmlns="http://www.w3.org/2000/svg")
+													path(d="m314.5 90.5c0 6-2 13-7 18l-133 133c-5 5-10 7-17 7s-12-2-17-7l-133-133c-10-10-10-25 0-35s24-10 34 0l116 116 116-116c10-10 24-10 34 0 5 5 7 11 7 17z")
+
+											.dropdown-block__container.js-dropdown-target
+												p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus molestias optio commodi enim perferendis, totam sint laudantium accusantium dolorum itaque cupiditate ullam, hic, laborum delectus iste laboriosam voluptates dolor iusto. Eius voluptate dolore fugiat odio repellat architecto, cumque repellendus culpa!
+
+
+
+
+			.contacts-map#map
+
+			.contacts__feedback.purple-bg
+				.container
+					.form-section.form-section--contacts
+						.form-section__title Обратная связь
+						p.form-section__subtitle Поля, отмеченные * обязательны для заполнения
+						form.form-section__form.form-block.js-form
+							.row.form-block__row
+								.form-block__row.col-md-8.form-block__row--textarea
+									textarea.js-required-field(placeholder="Текст комментария*:")
+									//.error for show invalid
+
+								.form-block__row.col-md-4
+									input.js-required-field(type="text" placeholder="Ваше имя*")
+									input.js-required-field(type="text" placeholder="Ваша фамилия*")
+									input.js-required-field(type="text" placeholder="Ваша фамилия*")
+
+							label.form-block__file.file-item
+								input(type="file" name="file-feedback")
+								svg.svg-attache
+									use(xlink:href="#28--attache")
+								span.js-file-name Прикрепить файл
+
+							.form-block__row.form-block__row--result
+								button.btn.btn--wide.js-send-btn
+										span.btn__inner Отправить
+								.form-block__status-message.js-form-status Пожалуйста, заполните все необходимые поля
+
+							.form-section__notice
+								p Нажимая кнопку Подписаться, вы соглашаетесь получать персонализированную информацию и предложения, касающиеся "Технопарк высоких технологий Свердловской области", по электронной почте. #[a(href="#") Политика конфиденциальности.]
+
+
+			.contacts__departments.departments
+				.container
+					p.departments__title Контакты отделов Технопарка
+					p.departments__subtitle Вы можете обратиться в нужный вам отдел Технопарка или позвонить по общему номеру:
+					ul.departments__list
+						each i in [1,2,3,4,5]
+							li.departments__item.department
+								.department__img-wrapp
+									img.department__img(src="images/department-img-"+i+".jpg", alt="")
+								.department__content
+									p.department__title Приемная генерального директора и заместителей
+									.department__contacts
+										.department__contact
+											span.department__contact-title Телефоны:
+											.department__contact-value
+												a(href="") +7 (343) 229-01-00
+												a(href="") +7 (343) 229-01-00
+										.department__contact
+											span.department__contact-title E-mail:
+											.department__contact-value
+												a(href="") info@uralhitech.ru
+										.department__contact
+											span.department__contact-title Время работы:
+											.department__contact-value Пн - Пт: 9.00 - 18.00       Сб - Вс: выходные
+
+
+
+		include partails/footer.pug
+		script(src="https://api-maps.yandex.ru/2.1/?apikey=f44c0451-d1e5-47a9-9615-bf705d4a8a4f&lang=ru_RU")
+		include partails/scripts.pug

@@ -1,0 +1,32 @@
+.press-center {
+    &__title {
+        margin: 0 0 37px;
+        text-align: center;
+
+        &--article {
+            color: #fff;
+        }
+    }
+
+
+    &__articles {
+        background-image: url('../images/press-center-speech.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+
+        padding: 95px 0 130px;
+    }
+
+    &__videos {
+        padding: 115px 0 50px;
+    }
+
+    &__gallery {
+        padding: 50px 0 95px;
+    }
+
+    &__publication {
+        padding: 102px 0 120px;
+        margin-bottom: 0;
+    }
+}

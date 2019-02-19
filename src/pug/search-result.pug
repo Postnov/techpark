@@ -1,0 +1,43 @@
+doctype html
+html(lang="ru")
+	include partails/head.pug
+	body
+
+		include partails/header.pug
+
+		.inner-top
+			img.inner-top__img(src="images/inner-top-img.png" alt="")
+
+		.page
+			.page__container.page__container--inner.container
+				.page__content
+					.page__header.page-header
+						.page-header__breadcrumbs.page-breadcrumbs
+							ul
+								li
+									a(href='#') Главная
+								li
+									span Не найдено
+						.page-header__content
+							.page-header__subtitle Технопарк высоких технологий Свердловской области
+							.page-header__title Не найдено
+
+
+					.page-img-banner(style="background-image: url('images/search-result-bg.jpg')")
+						.page-img-banner__container
+							h2.page-img-banner__title Не удалось найти страницу по вашему запросу
+							p.page-img-banner__text К сожалению, мы не можем найти запрашиваемую страницу. Попробуйте ввести другой запрос для поиска:
+
+							form.search-field
+								input.search-field__input(type="text" placeholder="Введите запрос для поиска")
+								button.search-field__button
+									svg.svg-search
+										use(xlink:href="#32--search")
+
+
+					include partails/redirect.pug
+
+
+
+		include partails/footer.pug
+		include partails/scripts.pug

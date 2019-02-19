@@ -1,0 +1,55 @@
+doctype html
+html(lang="ru")
+	include partails/head.pug
+	body
+
+		include partails/header.pug
+
+		.inner-top
+			img.inner-top__img(src="images/inner-top-img.png" alt="")
+
+		.page.page--404
+			.page__container.page__container--inner.container
+				.page__content
+					.page__header.page-header
+						.page-header__breadcrumbs.page-breadcrumbs
+							ul
+								li
+									a(href='#') Главная
+								li
+									span Фотогалерея
+						.page-header__content
+							.page-header__subtitle Технопарк высоких технологий Свердловской области
+							.page-header__title Фотогалерея
+
+
+					.photogallery-block
+						h3.photogallery-block__title События
+
+						ul.photogallery-grid
+							each i in [1,2,3,1,2]
+								li.photogallery-grid__item
+									a.photogallery-grid__wrapp-link(href="#")
+										img.photogallery-grid__img(src="images/photogallery-img-"+i+".jpg", alt="")
+										.photogallery-grid__content
+											.photogallery-grid__text Корпоративные профессиональные состязания
+
+
+			.purple-bg
+				.container
+					.photogallery-block.photogallery-block--purple
+						h3.photogallery-block__title Мероприятия
+
+						.photogallery-grid
+							each i in [1,2,3,1,2]
+								.photogallery-grid__item
+									img.photogallery-grid__img(src="images/photogallery-img-"+i+".jpg", alt="")
+									.photogallery-grid__content
+										.photogallery-grid__text
+											a.photogallery-grid__link(href="#") Корпоративные профессиональные состязания
+
+
+
+
+		include partails/footer.pug
+		include partails/scripts.pug

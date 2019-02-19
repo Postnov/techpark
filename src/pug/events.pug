@@ -1,0 +1,66 @@
+doctype html
+html(lang="ru")
+	include partails/head.pug
+	body
+
+		include partails/header.pug
+
+		.inner-top
+			img.inner-top__img(src="images/inner-top-img.png" alt="")
+
+		.page.page-events
+			.page__container.page__container--inner.container
+				.page__content
+
+					.page__header.page-header
+						.page-header__breadcrumbs.page-breadcrumbs
+							ul
+								li
+									a(href='#') Главная
+								li
+									span Мероприятия
+						.page-header__content
+							.page-header__subtitle Технопарк высоких технологий Свердловской области
+							.page-header__title Ближайшие #[br] Мероприятия
+
+
+
+					.choose-month
+						svg.choose-month__calendar
+							use(xlink:href="#17--calendar")
+						.choose-month__text Сентябрь
+						svg.choose-month__arrow(enable-background="new 0 0 314.5 314.5" version="1.1" viewbox="0 0 314.5 314.5" xml:space="preserve" xmlns="http://www.w3.org/2000/svg")
+							path(d="m314.5 90.5c0 6-2 13-7 18l-133 133c-5 5-10 7-17 7s-12-2-17-7l-133-133c-10-10-10-25 0-35s24-10 34 0l116 116 116-116c10-10 24-10 34 0 5 5 7 11 7 17z")
+
+
+						ul.choose-month__list
+							each i in ["Май","Июнь", "Март", "Апрель"]
+								li.choose-month__item
+									a.choose-month__link(href="#")=i
+
+
+					.events
+						ul.events__list
+							li.events__item.events__item--wide.event.event--wide
+								img.event__img(src="images/event-img-1.jpg" alt="")
+								.event__content
+									.event__date 23 октября 2018
+									p.event__title Навигатор Инноватора
+									p.event__text Навигатор Инноватора У вас есть проект или идея? Есть большое желание реализовать это, но нет возможности? Записывайтесь на полезное и интересное мероприятие
+									a.event__link(href="#") Подробнее
+
+							each i in [2,3,4]
+								li.events__item.event
+									img.event__img(src="images/event-img-"+i+".jpg" alt="")
+									.event__content
+										.event__date 23 октября 2018
+										a.event__name Семинар-практикум по независимой оценке квалификаций «Оценка квалификации. Траектория профессионального роста» в рамках ОК!НАНО-ТУРа.
+
+
+
+
+				include partails/sidebar-3.pug
+
+
+		include partails/footer.pug
+		include partails/scripts.pug

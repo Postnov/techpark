@@ -1,0 +1,200 @@
+.video-block {
+
+    .share-icon-vk,
+    .share-icon-tw,
+    .share-icon-fb {
+        width: 26px;
+        height: 25px;
+        padding: 5px;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: .3s all;
+        fill: #fff;
+    }
+
+    .share-icon-vk {
+        background-color: #62729b;
+
+        &:hover { background-color: darken(#62729b, 10%);}
+    }
+    .share-icon-tw{
+        background-color: #77a8da;
+        &:hover { background-color: darken(#77a8da, 10%);}
+    }
+    .share-icon-fb{
+        background-color: #4b5a93;
+        &:hover { background-color: darken(#4b5a93, 10%);}
+    }
+
+
+    &__grid {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 48.5%;
+        position: relative;
+
+        @include _480 {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        &:hover {
+           &::after {opacity: 1;}
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,.6);
+            z-index: 10;
+        }
+        &::after {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 108px;
+            z-index: 20;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url('../images/play-icon-video.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            cursor: pointer;
+            opacity: 0.8;
+
+            @include _600 {
+                width: 80px;
+                height: 71px;
+            }
+
+            @include _480 {
+                width: 120px;
+                height: 108px;
+            }
+
+            @include _350 {
+                width: 80px;
+                height: 71px;
+            }
+        }
+    }
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        padding: 25px 0;
+        color: #666666;
+    }
+    &__stats {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        .svg-reply,
+        .svg-veivs {
+            fill:  #666666;
+            margin-right: 6px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .svg-reply {
+            width: 23px;
+            height: 15px;
+        }
+        .svg-veivs {
+            width: 22px;
+            height: 14px;
+        }
+
+        @include _768 {
+            width: 50%;
+        }
+        @include _480 {
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+    }
+    &__stat {
+        user-select: none;
+
+        &:not(:last-child) {
+            margin-right: 35px;
+        }
+
+        &::before {
+            content: '';
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 8px;
+            vertical-align: -1px;
+        }
+
+        @include _768 {
+            margin-bottom: 10px;
+        }
+    }
+    &__share-count {
+        &::before {
+            width: 23px;
+            height: 15px;
+            background-image: url('../images/share-icon.png');
+        }
+    }
+    &__views {
+        &::before {
+            width: 22px;
+            height: 14px;
+            background-image: url('../images/views-icon.png');
+        }
+    }
+    &__share {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include _768 {
+            width: 50%;
+            flex-wrap: nowrap;
+        }
+
+        @include _480 {
+            width: 100%;
+            flex-wrap: wrap;
+        }
+    }
+    &__share-icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 15px;
+
+        a {
+            display: inline-block;
+            margin: 0 3px;
+        }
+    }
+}
+

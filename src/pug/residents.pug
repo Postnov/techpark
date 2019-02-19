@@ -1,0 +1,101 @@
+doctype html
+html(lang="ru")
+	include partails/head.pug
+	body
+
+		include partails/header.pug
+
+		.inner-top
+			img.inner-top__img(src="images/inner-top-img.png" alt="")
+
+		.page
+			.page__container.page__container--inner.container
+				.page__content
+					.page__header.page-header
+						.page-header__breadcrumbs.page-breadcrumbs
+							ul
+								li
+									a(href='#') Главная
+								li
+									a(href='#') О технопарке
+								li
+									span Резиденты
+						.page-header__content
+							.page-header__subtitle Технопарк высоких технологий Свердловской области
+							.page-header__title Резиденты
+
+
+
+					.residents-banner
+						.residents-banner__content
+							h2 Технопарк — площадка для развития ваших проектов
+							p Это центр компьютерного инжиниринга, направленный на решение производственных задач, связанных с разработкой или оптимизацией существующих изделий, технологических процессов на основе задания Заказчика.
+							a.btn.btn--yellow(href="#")
+								span.btn__inner Стать резидентом
+
+					.residents-block
+						h3.residents-block__subtitle Наши резиденты
+						h2.residents-block__title Приборостроение и электроника
+
+						ul.residents-block__list
+							each i in [1,2,3,4]
+								li.residents-block__item.resident
+									.resident__img-wrapp
+										img.resident__img(src="images/resident-img-"+i+".png", alt="")
+									.resident__content
+										p.resident__name ООО «Явиар»
+										p.resident__descr Автоматизация производственных процессов и робототехника. Изготовление
+										address.resident__contacts
+											a.resident__phone(href="tel:8(343)2290100")
+												svg.svg-phone-2
+													use(xlink:href='#32--phone-2')
+												span +7 (343) 229-01-00
+											a.resident__email(href="mailto:info@posteks.ru")
+												svg.svg-mail
+													use(xlink:href='#32--mail')
+												span info@posteks.ru
+
+
+
+
+					.residents-block
+						h3.residents-block__subtitle Наши резиденты
+						h2.residents-block__title Энергоэффективность, энергосбережение и альтернативная энергетика
+
+						ul.residents-block__list
+							each i in [1,2,3,4]
+								li.residents-block__item.resident
+									.resident__img-wrapp
+										img.resident__img(src="images/resident-img-"+i+".png", alt="")
+									.resident__content
+										p.resident__name ООО «Явиар»
+										p.resident__descr Автоматизация производственных процессов и робототехника. Изготовление, настройка и наладка конвейерных линий на площадке Технопарка.
+										address.resident__contacts
+											a.resident__phone(href="tel:8(343)2290100")
+												svg.svg-phone-2
+													use(xlink:href='#32--phone-2')
+												span +7 (343) 229-01-00
+											a.resident__email(href="mailto:info@posteks.ru")
+												svg.svg-mail
+													use(xlink:href='#32--mail')
+												span info@posteks.ru
+
+
+
+			.residents-steps.purple-bg
+				.container
+					.residents-steps__block
+						.residents-steps__title 3 шага, чтобы стать резидентом Технопарка
+
+						ol.residents-steps__list
+							li.residents-steps__item
+								p.residents-steps__text Заполнените #[a(href="#") Заявление] о присвоении статуса резидента Технопарка высоких технологий Свердловской области «Университетский» (направить по адресу resident@uralhitech.ru).
+							li.residents-steps__item
+								p.residents-steps__text Рассмотрение Экспертным Советом технопарка высоких технологий «Университетский» вашего заявления и документов.
+							li.residents-steps__item
+								p.residents-steps__text Защита проекта на Экспертном совете.
+
+
+
+		include partails/footer.pug
+		include partails/scripts.pug

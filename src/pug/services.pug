@@ -1,0 +1,247 @@
+doctype html
+html(lang="ru")
+	include partails/head.pug
+	body
+
+		include partails/header.pug
+
+		.inner-top
+			img.inner-top__img(src="images/inner-top-img.png" alt="")
+
+		.page
+			.page__container.page__container--inner.container
+				.page__content
+					.page__header.page-header
+						.page-header__breadcrumbs.page-breadcrumbs
+							ul
+								li
+									a(href='#') Главная
+								li
+									a(href='#') Услуги Технопарка
+								li
+									span Инжиниринговый центр
+						.page-header__content
+							.page-header__subtitle Технопарк высоких технологий Свердловской области
+							.page-header__title Инжиниринговый центр передовых производственных технологий
+
+					.text-block
+						p.
+							Здесь можно разместить текст для описания раздела Услуги и компетенции Технопарка. Например, несколько абзацев:
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+
+
+					.text-block
+						h3 Инжиниринговый центр
+						p.
+							Это центр компьютерного инжиниринга, направленный на решение производственных задач, связанных с разработкой или оптимизацией существующих изделий, технологических процессов на основе задания Заказчика.
+
+						a.arrow-link(href="#") Подробнее
+							svg.svg-arrow-right
+								use(xlink:href="#2--arrow_right")
+
+
+
+
+					.services
+						ul.services__list
+							each i in [1,2,3,4]
+								li.services__item.service
+									a.service__wrap-link(href="#")
+										.service__img-wrapp
+											img.service__img(src="images/service-img.png" alt="")
+										.service__content
+											p.service__title 3D Сканирование (обратный инжиниринг)
+											p.service__text Обратный инжиниринг и трехмерное сканирование подразумевают бесконтактный процесс перевода физической формы реального объекта в цифровую форму. Итогом процесса является трехмерная модель объекта.
+											.service__btn.btn.btn-gradient
+												.btn__inner
+													span Узнать больше
+													svg.svg.svg-question
+														use(xlink:href="#svg-icon-question")
+
+					.purple-block
+						.purple-block__container
+							h3 Центр поддержки инноваций
+							p.
+								Региональный центр поддержки инноваций является элементом инновационной инфраструктуры Свердловской области и осуществляет свою деятельность в интересах инновационных предприятий и организаций региона, а также региональных институтов развития и инновационных территориальных кластеров.
+
+							a.arrow-link.arrow-link--yellow(href="#")
+								svg.svg-arrow-left
+									use(xlink:href="#2--arrow_left")
+								span Подробнее
+
+
+							.services
+								ul.services__list
+									each i in [1,2]
+										li.services__item.service
+											a.service__wrap-link(href="#")
+												.service__img-wrapp
+													img.service__img(src="images/service-img.png" alt="")
+												.service__content
+													p.service__title 3D Сканирование (обратный инжиниринг)
+													p.service__text Обратный инжиниринг и трехмерное сканирование подразумевают бесконтактный процесс перевода физической формы реального объекта в цифровую форму. Итогом процесса является трехмерная модель объекта.
+													.service__btn.btn.btn-gradient
+														.btn__inner
+															span Узнать больше
+															svg.svg.svg-question
+																use(xlink:href="#svg-icon-question")
+
+
+
+					.text-block.padding-block
+						h3 Сервисный центр
+						p.
+							Это центр компьютерного инжиниринга, направленный на решение производственных задач, связанных с разработкой или оптимизацией существующих изделий, технологических процессов на основе задания Заказчика.
+
+						a.arrow-link(href="#") Подробнее
+							svg.svg-arrow-right
+								use(xlink:href="#2--arrow_right")
+
+
+
+					.services
+						ul.services__list
+							each i in [1,2]
+								li.services__item.service
+									a.service__wrap-link(href="#")
+										.service__img-wrapp
+											img.service__img(src="images/service-img.png" alt="")
+										.service__content
+											p.service__title 3D Сканирование (обратный инжиниринг)
+											p.service__text Обратный инжиниринг и трехмерное сканирование подразумевают бесконтактный процесс перевода физической формы реального объекта в цифровую форму. Итогом процесса является трехмерная модель объекта.
+											.service__btn.btn.btn-gradient
+												.btn__inner
+													span Узнать больше
+													svg.svg.svg-question
+														use(xlink:href="#svg-icon-question")
+
+						.dropdown-block.js-dropdown-block
+							.dropdown-block__trigger.js-dropdown-trigger
+								.dropdown-block__link Информация о контактах
+								svg.dropdown-block__arrow.js-dropdown-arrow(enable-background="new 0 0 314.5 314.5" version="1.1" viewbox="0 0 314.5 314.5" xml:space="preserve" xmlns="http://www.w3.org/2000/svg")
+									path(d="m314.5 90.5c0 6-2 13-7 18l-133 133c-5 5-10 7-17 7s-12-2-17-7l-133-133c-10-10-10-25 0-35s24-10 34 0l116 116 116-116c10-10 24-10 34 0 5 5 7 11 7 17z")
+
+							.dropdown-block__container.js-dropdown-target
+								.team
+									ul.team__list
+										each i in [1,2]
+											li.team__item.worker.text-center
+												.worker__img-wrapp
+													img.worker__img(src="images/team-img-"+i+".png" alt="")
+												.worker__name Марина Аросланкина
+												.worker__position Начальник отдела по работе с резидентами
+												.worker__contacts
+													a.worker__phone(href="tel:89122492347") +7 (912) 24 92 347
+													a.worker__email(href="mailto:amv@uralhitech.ru ") amv@uralhitech.ru
+
+
+
+					.purple-block
+						.purple-block__container
+							h3 Бизнес инкубатор
+
+							a.arrow-link.arrow-link--yellow(href="#")
+								svg.svg-arrow-left
+									use(xlink:href="#2--arrow_left")
+
+								span Подробнее
+
+
+							.services
+								ul.services__list
+									each i in [1]
+										li.services__item.service
+											a.service__wrap-link(href="#")
+												.service__img-wrapp
+													img.service__img(src="images/service-img.png" alt="")
+												.service__content
+													p.service__title 3D Сканирование (обратный инжиниринг)
+													p.service__text Обратный инжиниринг и трехмерное сканирование подразумевают бесконтактный процесс перевода физической формы реального объекта в цифровую форму. Итогом процесса является трехмерная модель объекта.
+													.service__btn.btn.btn-gradient
+														.btn__inner
+															span Узнать больше
+															svg.svg.svg-question
+																use(xlink:href="#svg-icon-question")
+
+							.dropdown-block.js-dropdown-block
+								.dropdown-block__trigger.js-dropdown-trigger
+									.dropdown-block__link.dropdown-block__link--white Информация о контактах
+									svg.dropdown-block__arrow.js-dropdown-arrow(enable-background="new 0 0 314.5 314.5" version="1.1" viewbox="0 0 314.5 314.5" xml:space="preserve" xmlns="http://www.w3.org/2000/svg")
+										path(d="m314.5 90.5c0 6-2 13-7 18l-133 133c-5 5-10 7-17 7s-12-2-17-7l-133-133c-10-10-10-25 0-35s24-10 34 0l116 116 116-116c10-10 24-10 34 0 5 5 7 11 7 17z")
+
+								.dropdown-block__container.js-dropdown-target
+									.team
+										ul.team__list
+											each i in [1,2]
+												li.team__item.worker.text-center
+													.worker__img-wrapp
+														img.worker__img(src="images/team-img-"+i+".png" alt="")
+													.worker__name Марина Аросланкина
+													.worker__position Начальник отдела по работе с резидентами
+													.worker__contacts
+														a.worker__phone(href="tel:89122492347") +7 (912) 24 92 347
+														a.worker__email(href="mailto:amv@uralhitech.ru ") amv@uralhitech.ru
+
+
+
+					.padding-block.text-block
+						h3 Коворкинг
+						a.arrow-link(href="#") Подробнее
+							svg.svg-arrow-right
+								use(xlink:href="#2--arrow_right")
+
+
+					.services
+						ul.services__list
+							each i in [1]
+								li.services__item.service
+									a.service__wrap-link(href="#")
+										.service__img-wrapp
+											img.service__img(src="images/service-img.png" alt="")
+										.service__content
+											p.service__title 3D Сканирование (обратный инжиниринг)
+											p.service__text Обратный инжиниринг и трехмерное сканирование подразумевают бесконтактный процесс перевода физической формы реального объекта в цифровую форму. Итогом процесса является трехмерная модель объекта.
+											.service__btn.btn.btn-gradient
+												.btn__inner
+													span Узнать больше
+													svg.svg.svg-question
+														use(xlink:href="#svg-icon-question")
+
+
+
+						.dropdown-block.js-dropdown-block
+							.dropdown-block__trigger.js-dropdown-trigger
+								.dropdown-block__link Информация о контактах
+								svg.dropdown-block__arrow.js-dropdown-arrow(enable-background="new 0 0 314.5 314.5" version="1.1" viewbox="0 0 314.5 314.5" xml:space="preserve" xmlns="http://www.w3.org/2000/svg")
+									path(d="m314.5 90.5c0 6-2 13-7 18l-133 133c-5 5-10 7-17 7s-12-2-17-7l-133-133c-10-10-10-25 0-35s24-10 34 0l116 116 116-116c10-10 24-10 34 0 5 5 7 11 7 17z")
+
+							.dropdown-block__container.js-dropdown-target
+								.team
+									ul.team__list
+										each i in [1,2]
+											li.team__item.worker.text-center
+												.worker__img-wrapp
+													img.worker__img(src="images/team-img-"+i+".png" alt="")
+												.worker__name Марина Аросланкина
+												.worker__position Начальник отдела по работе с резидентами
+												.worker__contacts
+													a.worker__phone(href="tel:89122492347") +7 (912) 24 92 347
+													a.worker__email(href="mailto:amv@uralhitech.ru ") amv@uralhitech.ru
+
+						.padding-block.text-block
+							h3 Региональный оператор Сколково
+							a.arrow-link(href="#") Подробнее
+								svg.svg-arrow-right
+									use(xlink:href="#2--arrow_right")
+
+
+							p.
+								Описание (анонс) услуги/компетенции - в случае если у раздела нет услуг, то можно выводить только описание, а внутри раздела услуги показывать также только текстовое описание подробное и меиисию, цель, компетенции
+
+
+
+				include partails/sidebar-1.pug
+
+		include partails/footer.pug
+		include partails/scripts.pug

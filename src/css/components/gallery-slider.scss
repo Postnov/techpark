@@ -1,0 +1,56 @@
+.gallery-slider {
+
+    img {
+        width: 100%;
+        display: block;
+    }
+
+    &__arrow-prev,
+    &__arrow-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 28px;
+        height: 51px;
+        fill: #c8ceeb;
+        cursor: pointer;
+
+        &.slick-disabled {
+            opacity: 0.2;
+        }
+
+        @include _768 {
+            bottom: -56px;
+            top: auto;
+            transform: none;
+            width: 22px;
+            height: 30px;
+        }
+    }
+
+    &__arrow-prev {
+        left: -30px;
+
+        @include _768 {
+            left: 30px;
+        }
+    }
+
+    &__arrow-next {
+        right: -30px;
+
+        @include _768 {
+            right: 30px;
+        }
+    }
+
+    /* the slides */
+    .slick-slide {
+        margin: 0 10px;
+    }
+    /* the parent */
+    .slick-list {
+        margin: 0 -10px;
+    }
+
+}

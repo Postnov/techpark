@@ -1,0 +1,97 @@
+doctype html
+html(lang="ru")
+	include partails/head.pug
+	body
+
+		include partails/header.pug
+
+		.inner-top
+			img.inner-top__img(src="images/inner-top-img.png" alt="")
+
+		.page
+			.page__container.page__container--inner.container
+				.page__content
+					.page__header.page-header
+						.page-header__breadcrumbs.page-breadcrumbs
+							ul
+								li
+									a(href='#') Главная
+								li
+									a(href='#') Услуги Технопарка
+								li
+									span Инжиниринговый центр
+						.page-header__content
+							.page-header__subtitle Технопарк высоких технологий Свердловской области
+							.page-header__title О технопарке
+
+
+					.block-banner
+						img.block-banner__img(src="images/about-banner.jpg" alt="")
+						.block-banner__content
+							p.block-banner__title «Университетский»
+							p.block-banner__text это крупнейший в Свердловской области инновационный центр.
+
+
+					.about-features
+						.about-features__list
+							each item in featuresImages
+								.about-features__item
+									.about-features__img
+										svg(style=item.fill || '')
+											use(xlink:href=item.img)
+									p.about-features__text Создан с #[span целью увеличения темпов роста] экономики и решения социальных задач региона.
+
+						.about-features__links
+
+							a.about-features__link
+								.about-features__link-img
+									svg(class="svg-team")
+										use(xlink:href="#2--team")
+								.about-features__link-text Наша команда
+							a.about-features__link
+								.about-features__link-img
+									svg(class="svg-more_about")
+										use(xlink:href="#2--more_about")
+								.about-features__link-text Узнать больше об инфраструктуре Технопарка
+
+
+
+
+					.about-parks
+						.about-parks__title Входим в число 12 технопарков в сфере высоких технологий
+						.about-parks__text Проект развития технопарка высоких технологий Свердловской области "Университетский" реализуется в соответствии с федеральной программой "Создание в Российской Федерации технопарков в сфере высоких технологий" министерства связи и массовых коммуникаций РФ при поддержке Правительства Свердловской области.
+
+						.about-parks__list
+							each i in [1,2,3,4,5,6,7,8,1,2,3,4]
+								.about-parks__item
+									a.about-parks__wrap-link(href='#')
+										img.about-parks__img(src="images/park-img-"+i+".jpg", alt="")
+										p.about-parks__name Свердловская область
+										p.about-parks__link Подробнее о технопарке
+
+
+
+
+
+				include partails/sidebar-2.pug
+
+
+			.container
+				.partners
+					.partners__title Наши партнеры
+					.partners__subtitle  Проект развития технопарка высоких технологий Свердловской области "Университетский" реализуется в соответствии с федеральной программой "Создание в Российской Федерации технопарков в сфере высоких технологий" министерства связи и массовых коммуникаций РФ при поддержке Правительства Свердловской области.
+
+					.partners__gallery
+						svg.partners__prev-arrow.js-partner-prev
+							use(xlink:href="#2--arrow_left")
+						svg.partners__next-arrow.js-partner-next
+							use(xlink:href="#2--arrow_right")
+						.partners__slider.js-partners-slider
+							each i in [1,2,3,4,1,2,3,4,1,2,3,4]
+								.partners__item
+									img.partners__img(src="images/partner-img-"+i+".jpg" alt="")
+
+
+
+		include partails/footer.pug
+		include partails/scripts.pug

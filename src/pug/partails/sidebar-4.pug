@@ -1,0 +1,63 @@
+.page__sidebar.sidebar
+	.sidebar__container#sticky
+
+		.sidebar__block.sidebar-news
+			.sidebar__title Последние новости
+			ul.sidebar-news__list
+				each i in [1,2]
+					li.sidebar-news__item
+						a.sidebar-news__wrapp-link(href="#")
+							img.sidebar-news__img(src="images/sidebar-news-img.jpg", alt="")
+							.sidebar-news__content
+								.sidebar-news__date 3 ноября 2018
+								.sidebar-news__name Наши беспилотники взлетят в Китае?
+
+
+		.sidebar__block.sidebar-tags
+			.sidebar__title Популярные теги
+			ul.sidebar-tags__list
+				li.sidebar-tags__item
+					a.sidebar-tags__link(href="#")
+						span.sidebar-tags__text Сенбярь
+				li.sidebar-tags__item
+					a.sidebar-tags__link(href="#")
+						span.sidebar-tags__text НКО
+				li.sidebar-tags__item
+					a.sidebar-tags__link(href="#")
+						span.sidebar-tags__text Навигатор Инноватора
+				li.sidebar-tags__item
+					a.sidebar-tags__link(href="#")
+						span.sidebar-tags__text Екатеринбург
+				li.sidebar-tags__item
+					a.sidebar-tags__link(href="#")
+						span.sidebar-tags__text Технопарк
+
+
+		.sidebar__block.sidebar-subscribe
+			.sidebar__title Будь в курсе! #[svg.svg-subscribe #[use(xlink:href="#16--subscribe")]]
+			.sidebar__subtitle Подпишитесь на рассылку предстоящих мероприятий и будьте в курсе всех важных событий Технопарка:
+
+			form.form-block.js-form
+				input.js-required-field(placeholder="Ваша почта" type="email")
+
+				label.check-item.js-required-field
+					input(type="checkbox" name="policy")
+					span.check-item__square
+					span.check-item__text Я даю согласие на обработку #[a(href="#") персональных данных*]
+
+				button.sidebar__btn.btn.js-send-btn
+					span.btn__inner Отправить
+				.form-block__status-message.js-form-status Пожалуйста, заполните все
+
+		.sidebar-block.sidebar-social
+			.sidebar-social__title Мы в соцсетях:
+			.sidebar-social__links
+				a(href="#")
+					svg(class="share-icon-vk")
+						use(xlink:href="#32--vk")
+				a(href="#")
+					svg(class="share-icon-tw")
+						use(xlink:href="#32--tw")
+				a(href="#")
+					svg(class="share-icon-fb")
+						use(xlink:href="#32--fb")

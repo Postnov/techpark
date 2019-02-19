@@ -1,0 +1,79 @@
+.pagination {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+
+
+    &__arrow {
+        text-decoration: none;
+
+        &:hover svg {
+            fill: rgb(124, 150, 228);
+        }
+
+        svg {
+            fill: rgba(124, 150, 228, .3);
+            width: 67px;
+            height: 21px;
+            transition: .3s all;
+        }
+
+        @include _600 {
+            display: none;
+        }
+    }
+
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 0;
+        list-style: none;
+        margin: 0 35px;
+    }
+
+    &__item {
+        width: 45px;
+        height: 45px;
+        box-shadow: 0 -1px 0 rgba(65, 133, 0, 0);
+        border: 1px solid #dcdcdc;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 3px;
+        transition: .3s all;
+        cursor: pointer;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to right, #7451ab 0%, #6377e4 100%);
+            z-index: 1;
+            opacity: 0;
+            transition: .3s all;
+        }
+
+        &:hover,
+        &.is-current {
+            color: #fff;
+            border-color: #656bdb;
+            &::after {opacity: 1;}
+        }
+    }
+
+    &__link {
+        color: inherit;
+        position: relative;
+        z-index: 5;
+    }
+}

@@ -1,0 +1,94 @@
+doctype html
+html(lang="ru")
+	include partails/head.pug
+	body
+
+		include partails/header.pug
+
+		.inner-top
+			img.inner-top__img(src="images/inner-top-img.png" alt="")
+
+		.page.page--bg-white
+			.page__container.page__container--inner.container
+				.page__content
+					.page__header.page-header.page-header--inline
+						.page-header__breadcrumbs.page-breadcrumbs
+							ul
+								li
+									a(href='#') Главная
+								li
+									a(href="#") Пресс-центр
+								li
+									span Статьи
+						.page-header__content
+							.page-header__subtitle Технопарк высоких технологий Свердловской области
+							.page-header__title Все Статьи Технопарка
+
+
+					.page-filters
+						.page-filters__left
+							.page-filters__label За период:
+							select.page-filters__select.mr-1
+								option Вариант 1
+								option Вариант 2
+								option Вариант 3
+
+							select.page-filters__select.mr-1
+								option 2018
+								option 2017
+								option 2016
+							button.page-filters__btn.btn
+								span.btn__inner Показать
+
+						.page-filters__right
+							.page-filters__label Тема:
+							select.page-filters__select
+								option Все новости
+								option Проведенные мероприятия
+								option Ближайшие мероприятия
+								option Презентации
+								option Инновации
+
+
+
+
+			.articles.articles--bg-purple
+				.container
+					.articles__list
+						each i in [1,2,1,2]
+							article.articles__item.article
+								.article__img-wrapp
+									img.article__img(src="images/article-img-"+i+".jpg", alt="")
+								.article__content
+									a.article__link(href="#") #[h2.article__title Навигатор Инноватора: успевайте подать заявку]
+									p.article__text У вас есть проект или идея? Есть большое желание реализовать это, но нет возможности? Записывайтесь на полезное и интересное мероприятие Остается чуть более трех суток для регистрации желающих участвовать в Школе «Навигатор инноватора».
+									.article__info
+										a.article__link Подробнее
+										.article__tags
+											a(href="#") #Екатеринбург
+											a(href="#") #Тег 2
+											a(href="#") #Тег 3
+
+			.pagination
+				a(href='#').pagination__arrow
+					svg
+						use(xlink:href="#2--arrow_left")
+				ul.pagination__list
+					li.pagination__item.is-current
+						span.pagination__link 1
+					li.pagination__item
+						span.pagination__link 2
+					li.pagination__item
+						span.pagination__link 3
+					li.pagination__item
+						span.pagination__link ...
+					li.pagination__item
+						span.pagination__link 12
+				a(href='#').pagination__arrow
+					svg
+						use(xlink:href="#2--arrow_right")
+
+
+
+		include partails/footer.pug
+		include partails/scripts.pug

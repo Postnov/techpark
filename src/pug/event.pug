@@ -1,0 +1,184 @@
+doctype html
+html(lang="ru")
+	include partails/head.pug
+	body
+
+		include partails/header.pug
+
+		.inner-top
+			img.inner-top__img(src="images/inner-top-img.png" alt="")
+
+		.page
+			.page__container.page__container--inner.container
+				.page__content
+					.page__header.page-header
+						.page-header__breadcrumbs.page-breadcrumbs
+							ul
+								li
+									a(href='#') Главная
+								li
+									a(href='#') Услуги Технопарка
+								li
+									span Навигатор Инноватора
+						.page-header__content
+							.page-header__subtitle Технопарк высоких технологий Свердловской области
+							.page-header__title Навигатор Инноватора
+
+
+					.event-d-info
+						each i in ['calendar','time','place']
+							.event-d-info__item
+								svg(class="event-d-info__img svg-" + i)
+									use(xlink:href="#17--" + i)
+								.event-d-info__title Дата:
+								.event-d-info__value 13 ноября 2018
+
+
+					figure.figure
+						img.figure__img(src="images/event-d-img.jpg", alt="")
+						figcaption.figure__sign Организаторы: Сколково и технопарк высоких технологий "Университетский"
+
+
+
+					.text-block
+						h3 У вас есть проект или идея? Есть большое желание реализовать это, но нет возможности?
+						p Записывайтесь на полезное и интересное мероприятие.#[br][ОтУС] Открытый университет Сколково #[a(href='#') #НавигаторИнноватора] #[br]Мы открываем новый сезон школ в Екатеринбурге.
+
+
+					.alert-block
+						svg.alert-block__img
+							use(xlink:href="#13--important")
+						.alert-block__content
+							p.alert-block__title Прием заявок начался, поехали!
+							a.alert-block__link.arrow-link.arrow-link--right.arrow-link--yellow http://sk.ru/opus/p/ni-ekaterinburg-2018.aspx
+							p.alert-block__text Заявки на участие принимаются до 17 сентября 2018 (пн), 9.00 по московскому времени. Результаты конкурсного отбора и финальный список участников школы будут опубликованы на странице программы вечером 18 сентября 2018
+
+
+					.text-block
+						h3 Как участвовать в отборе на школу?
+						ul
+							li Для подачи заявки на участие необходимо заполнить анкету, рассказав о своем проекте по одному из следующих направлений: биомедицинские, информационные, энергоэффективные и промышленные технологии (анкета для участников с проектом).
+
+							li Те кандидаты, у кого еще нет готового проекта, но есть идеи и желание в будущем стать лидером или участником инновационного проекта, также могут попасть на Школу, заполнив анкету для участников без проекта.
+
+						p.purple-color Участие во всех мероприятиях школы бесплатное!
+
+					.text-block
+						h3 Где и когда?
+						p Школа пройдет с 25 по 28 сентября 2018 в технопарке «Университетский» (Екатеринбург, ул. Конструкторов, д.5)
+
+
+					.text-block
+						h3 А где можно почитать еще об этих школах?
+						p Больше информации по ссылке  #[a(href="http://sk.ru/opus/p/ni-ekaterinburg-2018.aspx") http://sk.ru/opus/p/ni-ekaterinburg-2018.aspx]
+						p Ищите информацию по хэштегам: #[a(href="") #ОтУС] #[a(href="") #Сколково] #[a(href="") #ТехнопаркУниверситетский] #[a(href="") #Екатеринбург]
+						p Навигатор инноватора. Екатеринбург — 2018 — #[a(href="") Skolkovo Communitysk.ru]
+
+
+
+
+
+					.text-block
+						h3 Фотогалерея
+
+					.photogallery.js-photogallery-slider
+						.photogallery__main
+							.photogallery__counter.photogallery-counter.js-slider-counter
+								.photogallery-counter__current.js-slider-current 1
+								span /
+								.photogallery-counter__all.js-slider-all 1
+							.photogallery__slider-main.js-photogallery-main-slider
+								each slide in [1,2,3,4,1,2,3]
+									.photogallery__slide.photogallery-slide
+										img.photogallery-slide__img(src="images/photogallery-img.jpg" alt="")
+										p.photogallery-slide__text Возможность добраться на общественном тарнспорте, большая парковка,территория с чистым воздухом в черте города
+							svg.photogallery__arrow-prev.js-photogallery-prev
+								use(xlink:href="#5--arrow_left")
+							svg.photogallery__arrow-next.js-photogallery-next
+								use(xlink:href="#5--arrow_right")
+
+						.photogallery__slider-thumb.js-photogallery-thumb-slider
+							each thumb in [1,2,3,4,1,2,3]
+								.photogallery__thumb.photogallery-thumb
+									.photogallery-thumb__img-wrapp
+										img.photogallery-thumb__img(src="images/thumb-img-"+thumb+".jpg" alt="")
+
+
+					.text-block
+						h3 Видео с мероприятия
+
+					.video-block
+						.video-block__grid
+							each i in [1,2]
+								a.video-block__item(data-fancybox href="https://www.youtube.com/watch?v=-5JVZqXvMy0")
+									img.video-block__img(src="images/video-img-"+i+".png" alt="")
+						.video-block__info
+							.video-block__stats
+								.video-block__stat
+									svg.svg-reply
+										use(xlink:href="#17--reply")
+									span Поделилось (34)
+								.video-block__stat
+									svg.svg-veivs
+										use(xlink:href="#17--veivs")
+									span Просмотров (34)
+
+							.video-block__share
+								span Поделитесь в соц.сетях:
+								.video-block__share-icons
+									svg(class="share-icon-vk")
+										use(xlink:href="#32--vk")
+									svg(class="share-icon-tw")
+										use(xlink:href="#32--tw")
+									svg(class="share-icon-fb")
+										use(xlink:href="#32--fb")
+
+
+
+					.text-block
+						h3 Комментарии
+
+					.comments-block
+						ul.comments-block__list
+							each i in [1,2]
+								li.comments-block__item.comment
+									p.comment__text С командой из двух десятков человек на борту отправился из порта в штате Массачусетс на китобойный промысел. Осенью 1820-го охота была прервана атакой гигантского кашалота на судно, в результате чего морякам пришлось пересесть в шлюпки. В течение трех с лишним месяцев они боролись за выживание посреди океана.
+
+									.comment__info
+										.comment__person
+											svg.svg-user
+												use(xlink:href="#17--user")
+											span Владислав Постнов
+										.comment__date
+											svg.svg-calendar-mini
+												use(xlink:href="#17--calendar_mini")
+											span 27 ноября 2018
+
+
+
+
+					.form-section
+						.form-section__title Добавить комментарий
+						p.form-section__subtitle Поля, отмеченные * обязательны для заполнения
+						form.form-section__form.form-block.js-form
+							.form-block__row.form-block__row--flex.form-block__row--flex-2
+								input.js-required-field(type="text" placeholder="Ваше имя*")
+								input.js-required-field(type="text" placeholder="Ваша фамилия*")
+
+							.form-block__row
+								textarea.js-required-field(placeholder="Текст комментария*:")
+
+							.form-block__row.form-block__row--result
+								button.btn.js-send-btn
+										span.btn__inner Отправить заявку на участие
+								.form-block__status-message.js-form-status Пожалуйста, заполните все необходимые поля
+							.form-section__notice
+								p Нажимая кнопку Подписаться, вы соглашаетесь получать персонализированную информацию и предложения, касающиеся "Технопарк высоких технологий Свердловской области", по электронной почте. #[a(href="#") Политика конфиденциальности.]
+
+
+
+				include partails/sidebar-4.pug
+
+
+		include partails/footer.pug
+		include partails/scripts.pug

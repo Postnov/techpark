@@ -1,0 +1,66 @@
+doctype html
+html(lang="ru")
+	include partails/head.pug
+	body
+
+		include partails/header.pug
+
+		.inner-top
+			img.inner-top__img(src="images/inner-top-img.png" alt="")
+
+		.page.page--bg-white
+			.page__container.page__container--inner.container
+				.page__content
+					.page__header.page-header
+						.page-header__breadcrumbs.page-breadcrumbs
+							ul
+								li
+									a(href='#') Главная
+								li
+									a(href='#') Мероприятия
+								li
+									span Корпоративные профессиональные состязания "Молодые профессионалы Роскосмоса-2018" по стандартам WorldSkills
+						.page-header__content
+							.page-header__subtitle Технопарк высоких технологий Свердловской области
+							.page-header__title Корпоративные профессиональные состязания "Молодые профессионалы Роскосмоса-2018" по стандартам WorldSkills
+
+
+					.photogallery.js-photogallery-slider
+						.photogallery__main
+							.photogallery__counter.photogallery-counter.js-slider-counter
+								.photogallery-counter__current.js-slider-current 1
+								span /
+								.photogallery-counter__all.js-slider-all 1
+							.photogallery__slider-main.js-photogallery-main-slider
+								each slide in [1,2,3,4,1,2,3]
+									.photogallery__slide.photogallery-slide
+										img.photogallery-slide__img(src="images/photogallery-img.jpg" alt="")
+										p.photogallery-slide__text Возможность добраться на общественном тарнспорте, большая парковка,территория с чистым воздухом в черте города
+							svg.photogallery__arrow-prev.js-photogallery-prev
+								use(xlink:href="#5--arrow_left")
+							svg.photogallery__arrow-next.js-photogallery-next
+								use(xlink:href="#5--arrow_right")
+
+						.photogallery__slider-thumb.js-photogallery-thumb-slider
+							each thumb in [1,2,3,4,1,2,3]
+								.photogallery__thumb.photogallery-thumb
+									.photogallery-thumb__img-wrapp
+										img.photogallery-thumb__img(src="images/thumb-img-"+thumb+".jpg" alt="")
+
+
+					.text-block.photo-report__descr
+						h2 Заголовок описания фото-отчета
+						p Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Города, встретил решила грустный своего предупредила приставка коварный рот проектах агентство дороге оксмокс запятых эта всемогущая своих злых от всех лучше?
+
+						h2 Заголовок описания фото-отчета
+						p Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Города, встретил решила грустный своего предупредила приставка коварный рот проектах агентство дороге оксмокс запятых эта всемогущая своих злых от всех лучше?
+
+						a.arrow-link.photo-report__arrow-back(href="#")
+							svg.svg-arrow-left
+								use(xlink:href="#2--arrow_left")
+							span Назад в фотогалерею
+
+
+
+		include partails/footer.pug
+		include partails/scripts.pug

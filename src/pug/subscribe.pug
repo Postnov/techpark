@@ -1,0 +1,90 @@
+doctype html
+html(lang="ru")
+	include partails/head.pug
+	body
+
+		include partails/header.pug
+
+		.inner-top
+			img.inner-top__img(src="images/inner-top-img.png" alt="")
+
+		.page
+			.page__container.page__container--inner.container
+				.page__content
+					.page__header.page-header
+						.page-header__breadcrumbs.page-breadcrumbs
+							ul
+								li
+									a(href='#') Главная
+								li
+									a(href='#') О технопарке
+								li
+									span Подписка на новости
+						.page-header__content
+							.page-header__subtitle Технопарк высоких технологий Свердловской области
+							.page-header__title Подписка на новости
+
+
+					.text-block
+						h3 Из этих писем вы узнаете:
+
+					.grid-features
+						ul.grid-features__list
+							each i in ['meetings','rocket','possibility']
+								li.grid-features__item
+									.grid-features__img-wrapp
+										svg(class="grid-features__icon svg-icon-"+i)
+											use(xlink:href="#9--"+i)
+									p Ближайшие мероприятия в нашей области и нашем Технопарке
+
+
+					.form-section
+						.form-section__title Заполните поля для оформления подписки
+						p.form-section__subtitle Поля, отмеченные * обязательны для заполнения
+						form.form-section__form.form-block.js-form
+							.form-block__row.form-block__row--flex.form-block__row--flex-2
+								input.js-required-field( type="text" placeholder="Ваша почта*" name="1")
+								input.js-required-field( type="text" placeholder="Подтверждение почты*" name="2")
+
+							.form-block__row.form-block__row--flex.form-block__row--flex-2
+								input.js-required-field( type="text" placeholder="Ваше имя*" name="3" title="email")
+								input.js-required-field( type="text" placeholder="Ваша фамилия*" name="4")
+
+							.form-block__row.form-block__checks
+								p Выберите интересующую вас тему:*
+
+								.checkbox-item
+									input(type="checkbox" name="check")
+									.checkbox-item__custom.btn.btn--white
+										.btn__inner
+											svg.svg-icon-innovation()
+												use(xlink:href="#9--innovation")
+											span Инновации
+
+								.checkbox-item
+									input(type="checkbox" name="check")
+									.checkbox-item__custom.btn.btn--white
+										.btn__inner
+											svg.svg-icon-education()
+												use(xlink:href="#9--education")
+											span Образование
+
+
+
+							.form-block__row.form-block__row--result
+								button.btn.js-send-btn
+										span.btn__inner Отправить заявку на участие
+								.form-block__status-message.js-form-status Пожалуйста, заполните все обязательные поля
+
+							.form-section__notice
+								p Нажимая кнопку Подписаться, вы соглашаетесь получать персонализированную информацию и предложения, касающиеся "Технопарк высоких технологий Свердловской области", по электронной почте. #[a(href="#") Политика конфиденциальности.]
+
+
+
+
+
+
+				include partails/sidebar-2.pug
+
+		include partails/footer.pug
+		include partails/scripts.pug

@@ -1,0 +1,59 @@
+aside.page__sidebar.sidebar
+    .sidebar__container#sticky
+
+        .sidebar__block.sidebar-menu
+            .sidebar__title О Технопарке #[svg.svg-about #[use(xlink:href="#2--about")]]
+
+            ul.sidebar-menu__list
+                li.sidebar-menu__item
+                    a.sidebar-menu__subtitle(href="#") Команда
+
+                li.sidebar-menu__item
+                    a.sidebar-menu__subtitle.active(href="#") Вакансии
+
+                li.sidebar-menu__item
+                    a.sidebar-menu__subtitle(href='#') Инфраструктура
+
+                li.sidebar-menu__item
+                    a.sidebar-menu__subtitle(href='#') Экскурсия по технопарку
+
+                li.sidebar-menu__item
+                    a.sidebar-menu__subtitle(href='#') Экспертный совет
+
+                li.sidebar-menu__item
+                    a.sidebar-menu__subtitle(href='#') Документы
+
+                li.sidebar-menu__item
+                    a.sidebar-menu__subtitle(href='#') Подписка на новости
+
+                li.sidebar-menu__item
+                    a.sidebar-menu__subtitle(href='#') Политика конфиденциальности и согласие на обработку данных
+
+
+
+
+
+
+
+
+
+
+        .sidebar__block
+            p.sidebar__title Обратная связь #[svg.svg-callback #[use(xlink:href="#32--service-cons2")]]
+            p.sidebar__subtitle Если у вас возникли вопросы  свяжитесь с нами и мы постараемся помочь вам:
+
+
+            form.form-block.js-form
+                input.js-required-field(placeholder="Ваше имя")
+                input.js-required-field(placeholder="Ваш номер" type="tel")
+                textarea.js-required-field(placeholder="Ваше сообщение")
+
+                label.check-item.js-required-field
+                    input(type="checkbox" name="policy" required)
+                    span.check-item__square
+                    span.check-item__text Я даю согласие на обработку #[a(href="#") персональных данных*]
+
+                button.sidebar__btn.btn.js-send-form
+                    span.btn__inner Отправить
+
+                .form-block__status-message.js-form-status Пожалуйста, заполните все обязательные поля

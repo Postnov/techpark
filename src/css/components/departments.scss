@@ -1,0 +1,116 @@
+.departments {
+    padding: 80px 0 0;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100vw;
+        background-color: #fff;
+        height: 90px;
+        margin-top: 68px;
+    }
+
+    &__title {
+        font-size: 28px;
+        margin: 0;
+    }
+    &__subtitle {
+        color: #999999;
+        font-size: 15px;
+        margin: 0;
+    }
+    &__list {
+        padding-left: 0;
+        list-style: none;
+        margin-top: 37px;
+        margin-bottom: 0;
+    }
+    &__item {
+        display: block;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+
+.department {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 13px;
+    padding-right: 55px;
+
+    @include _768 {
+        padding: 30px;
+    }
+
+    &__img-wrapp {
+        margin-right: 30px;
+
+        @include _768 {
+            display: none;
+        }
+    }
+    &__img {}
+    &__content {
+        flex-grow: 1;
+    }
+    &__title {
+        color: #211f53;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 31px;
+    }
+    &__contacts {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        font-weight: bold;
+
+        @include _768 {
+            justify-content: flex-start;
+        }
+    }
+    &__contact {
+        @include _979 {
+            width: 50%;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        @include _768 {
+
+        }
+
+        @include _600 {
+            width: 100%;
+        }
+    }
+    &__contact-title {
+        color: #666666;
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 12px;
+        display: inline-block;
+    }
+    &__contact-value {
+        color: #1a1a1a;
+        font-size: 15px;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+
+            &:not(:last-child) { margin-bottom: 8px; }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+doctype html
+html(lang="ru")
+	include partails/head.pug
+	body
+
+		include partails/header.pug
+
+		.inner-top
+			img.inner-top__img(src="images/inner-top-img.png" alt="")
+
+		.page
+			.page__container.page__container--inner.container
+				.page__content
+					.page__header.page-header
+						.page-header__breadcrumbs.page-breadcrumbs
+							ul
+								li
+									a(href='#') Главная
+								li
+									a(href='#') О технопарке
+								li
+									span Как стать резидентом Технопарка
+						.page-header__content
+							.page-header__subtitle Технопарк высоких технологий Свердловской области
+							.page-header__title Как стать резидентом Технопарка
+
+
+					.resident-send
+						p Заполните #[a(href="") Заявление]  и отправьте начальнику отдела по работе с резидентами
+						button.btn
+							span.btn__inner Отправить
+
+
+			.purple-bg.resident-memo
+				h2.resident-memo__title Памятка резиденту
+
+				.container
+
+					.resident-memo__block
+						.text-block
+							h4 Текст
+							p Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Это пор рукопись эта решила запятой вопрос прямо все текстов? Буквоград себя предложения приставка переписали проектах вскоре путь повстречался одна.
+
+							ul
+								li 1asdasdasdasd
+								li asdasdasd
+								li asdasda
+
+					.resident-memo__block
+						.text-block
+							h4 Текст
+							p Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Это пор рукопись эта решила запятой вопрос прямо все текстов? Буквоград себя предложения приставка переписали проектах вскоре путь повстречался одна.
+
+							ul
+								li 1asdasdasdasd
+								li asdasdasd
+								li asdasda
+
+					.resident-memo__block
+						.text-block
+							h4 Текст
+							p Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Это пор рукопись эта решила запятой вопрос прямо все текстов? Буквоград себя предложения приставка переписали проектах вскоре путь повстречался одна.
+
+							ul
+								li 1asdasdasdasd
+								li asdasdasd
+								li asdasda
+
+
+			.person.person--resident.person--bg-white.container
+				include partails/person.pug
+
+
+		include partails/footer.pug
+		include partails/scripts.pug

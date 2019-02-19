@@ -1,0 +1,330 @@
+
+
+.inner-top {
+    height: 360px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        width: auto;
+        min-width: 102%;
+    }
+}
+
+
+
+.press-center-page {
+    .page__content {
+        padding-bottom: 0;
+    }
+}
+
+
+
+
+.page {
+    $page: &;
+    background-image: url('../images/inner-content-bg.png');
+    background-repeat: repeat;
+
+    &--bg-white {
+        background-color: #fff;
+        background-image: unset;
+
+        #{$page}__content {
+            background-color: #fff;
+            background-image: unset;
+        }
+    }
+
+    &--after-line {
+        &::after {
+            content: '';
+            display: block;
+            height: 150px;
+            width: 100%;
+            background-color: #fff;
+        }
+    }
+
+
+
+    &__container {
+        &--inner {
+            max-width: 1124px;
+            display: flex;
+            align-items: normal;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+    &__content {
+        width: 75%;
+        padding: 0 20px 70px 0;
+        flex-grow: 1;
+        background-image: url('../images/inner-content-bg.png');
+        position: relative;
+
+        &--bg-white {
+            background-color: #fff;
+            background-image: unset;
+        }
+
+        @include _768 {
+            width: 100%;
+            padding-right: 0;
+        }
+
+
+    }
+
+    &__sidebar {
+        width: 25%;
+
+        @include _768 {
+            width: 100%;
+        }
+    }
+
+    .text-block {
+
+
+        a {
+            color: #6276e2;
+        }
+
+        h3 {
+            margin: 25px 0 18px;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        p, li {
+            color: #666666;
+        }
+
+        ul, ol {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li,
+        ol li {
+            padding-left: 27px;
+            position: relative;
+            font-size: 15px;
+            line-height: 1.6;
+
+            &:not(:last-child) {
+                margin-bottom: 14px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                display: inline-block;
+            }
+        }
+
+
+
+        ul li {
+            &::before {
+                top: 6px;
+                left: 0;
+                display: inline-block;
+                background-image: url('../images/check-icon.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 19px;
+                height: 16px;
+            }
+        }
+
+        ol li {
+            counter-increment: li;
+
+            &::before {
+                content: counter(li) ")";
+                color: #6276e2;
+                font-weight: 900;
+            }
+        }
+
+        table {
+            width: 100%;
+            margin: 20px 0 10px;
+
+            td,th {
+                padding: 16px 19px;
+                border: 1px solid #d8e0f7;
+                font-size: 15px;
+                font-weight: 700;
+                min-width: 150px;
+            }
+
+            td {
+                color: #666666;
+                background-color: #fff;
+            }
+
+            th {
+                background-color: #5c70d6;
+                color: #fff;
+            }
+        }
+    }
+
+    .padding-block {
+        padding: 40px 0;
+
+        @include _768 {
+            padding: 25px 0;
+        }
+    }
+
+
+    .purple-block {
+        position: relative;
+        color: #fff;
+        padding: 80px 0 50px;
+
+        &__container {
+            z-index: 20;
+            position: relative;
+
+            > p {
+                color: #c8d2f6;
+            }
+
+            .arrow-link {}
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100vw;
+            height: 100%;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            right: -30px;
+            // background-color:rgba(72, 79, 164, .8);
+            background-image: url('../images/purple-bg.png');
+        }
+    }
+}
+
+
+.arrow-link {
+    display: inline-block;
+    vertical-align: middle;
+    color: #5a6dd2;
+    text-decoration: none;
+    margin-top: 20px;
+
+    .svg-arrow-right,
+    .svg-arrow-left {
+        width: 67px;
+        height: 21px;
+        display: inline-block;
+        vertical-align: -.3em;
+        fill: #7c96e4;
+        transition: .3s all;
+        margin: 0 3px;
+    }
+
+    &:hover {
+        text-decoration: none;
+        .svg-arrow-right {
+            transform: translateX(10px);
+        }
+        .svg-arrow-left {
+            transform: translateX(-10px);
+        }
+    }
+
+    &--yellow {
+        color: #ffd32b;
+
+        .svg-arrow-right,
+        .svg-arrow-left {
+            fill: #ffd32b;
+        }
+    }
+}
+
+
+
+
+.page-header {
+    $page-header: &;
+    margin-top: -130px;
+    margin-bottom: 30px;
+    position: relative;
+
+    &--inline {
+        #{$page-header}__content {
+            display: inline-block;
+            padding-right: 70px;
+
+            @include _768 {
+                padding-right: 10px;
+            }
+        }
+    }
+
+    &__content {
+        background-color: #fff;
+        padding: 40px 48px 30px 56px;
+        max-width: 95%;
+
+        @include _768 {
+            max-width: 100%;
+            padding: 30px;
+        }
+
+        @include _480 {
+            padding: 20px;
+        }
+    }
+
+    &__title {
+        color: #1a1238;
+        font-size: 43px;
+        font-weight: 400;
+        line-height: 1.1;
+
+        @include _768 {
+            font-size: 35px;
+            margin-top: 20px;
+        }
+
+        @include _480 {
+            font-size: 25px;
+        }
+    }
+
+    &__subtitle {
+        // Style for "Технопарк"
+        color: #5c70d6;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.8;
+        text-transform: uppercase;
+        letter-spacing:     1.12px;
+
+        @include _480 {
+            font-size: 10px;
+        }
+    }
+}

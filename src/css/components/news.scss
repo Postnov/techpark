@@ -1,0 +1,21 @@
+.news {
+    position: relative;
+
+    &__list {
+        position: relative;
+        z-index: 10;
+    }
+
+    &__item {
+        margin-bottom: 30px;
+    }
+
+    &--bg-purple {
+        @extend .articles--bg-purple;
+
+        &::before {
+            bottom: 0;
+            height: 90%;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+doctype html
+html(lang="ru")
+	include partails/head.pug
+	body
+
+		include partails/header.pug
+
+		.inner-top
+			img.inner-top__img(src="images/inner-top-img.png" alt="")
+
+		.page
+			.page__container.page__container--inner.container
+				.page__content
+					.page__header.page-header
+						.page-header__breadcrumbs.page-breadcrumbs
+							ul
+								li
+									a(href='#') Главная
+								li
+									a(href='#') О технопарке
+								li
+									span Документы
+						.page-header__content
+							.page-header__subtitle Технопарк высоких технологий Свердловской области
+							.page-header__title Документы
+
+					.padding-block
+						p В данном разделе вы можете скачать необходимые документы для работы с "Технопарк высоких технологий Свердловской области":
+
+					.documents
+						ul.documents__list
+							each item in documents
+								li.documents__item
+									svg(class="documents__icon svg-icon-" + item.img)
+										use(xlink:href="#8--" + item.img)
+									.documents__content
+										a.documents__name(href="#" title="Скачать документ")=item.name
+										span.documents__size=item.size
+							each item in documents
+								li.documents__item
+									svg(class="documents__icon svg-icon-" + item.img)
+										use(xlink:href="#8--" + item.img)
+									.documents__content
+										a.documents__name(href="#" title="Скачать документ")=item.name
+										span.documents__size=item.size
+
+
+					.text-block
+						h2 Для резидентов
+
+					.documents
+						ul.documents__list
+							each item in documents
+								li.documents__item
+									svg(class="documents__icon svg-icon-" + item.img)
+										use(xlink:href="#8--" + item.img)
+									.documents__content
+										a.documents__name(href="#" title="Скачать документ")=item.name
+										span.documents__size=item.size
+
+
+					.person.person--bg-white
+						include partails/person.pug
+
+
+
+				include partails/sidebar-2.pug
+
+		include partails/footer.pug
+		include partails/scripts.pug

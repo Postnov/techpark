@@ -1,0 +1,93 @@
+.person {
+    $person: &;
+
+    padding: 40px 30px;
+    margin-top: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include _768 {
+        text-align: center;
+        justify-content: center;
+    }
+
+    &--resident {
+        margin: 85px auto;
+        padding: 35px 75px;
+
+        #{$person}__title {
+            max-width: 100%;
+        }
+
+        #{$person}__img-wrapp {
+            margin-right: 100px;
+
+            @include _768 {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &--bg-white {
+        background-color: #fff;
+        box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    &__img-wrapp {
+        @extend .worker__img-wrapp;
+        min-width: 240px;
+        min-height: 240px;
+        margin-right: 30px;
+        margin-bottom: 0;
+
+        @include _768 {
+            margin-bottom: 30px;
+            margin-right: 0;
+        }
+    }
+
+    &__content {
+        flex-grow: 1;
+    }
+    &__title {
+        background-image: linear-gradient(to right, #7451ab 0%, #6377e4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #362068;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.2;
+        max-width: 420px;
+        margin-bottom: 35px;
+
+        @include _768 {
+            max-width: 100%;
+        }
+    }
+    &__name {
+        @extend .worker__name;
+        margin-bottom: 5px;
+    }
+    &__position {
+        @extend .worker__position;
+    }
+
+    &__contacts {
+        margin-top: 40px;
+        @extend .worker__contacts;
+
+        &::before {
+            width: 198px;
+        }
+    }
+    &__phone {
+        @extend .worker__phone;
+    }
+    &__email {
+        @extend .worker__email;
+    }
+
+}

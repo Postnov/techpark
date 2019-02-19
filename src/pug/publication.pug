@@ -1,0 +1,96 @@
+doctype html
+html(lang="ru")
+	include partails/head.pug
+	body
+
+		include partails/header.pug
+
+		.inner-top
+			img.inner-top__img(src="images/inner-top-img.png" alt="")
+
+		.page.page--bg-white
+			.page__container.page__container--inner.container
+				.page__content
+					.page__header.page-header.page-header--inline
+						.page-header__breadcrumbs.page-breadcrumbs
+							ul
+								li
+									a(href='#') Главная
+								li
+									a(href="#") Пресс-центр
+								li
+									span Публикации в СМИ
+						.page-header__content
+							.page-header__subtitle Технопарк высоких технологий Свердловской области
+							.page-header__title Все публикации
+
+
+					.page-filters
+						.page-filters__left
+							.page-filters__label За период:
+							select.page-filters__select.mr-1
+								option Вариант 1
+								option Вариант 2
+								option Вариант 3
+
+							select.page-filters__select.mr-1
+								option 2018
+								option 2017
+								option 2016
+							button.page-filters__btn.btn
+								span.btn__inner Показать
+
+						.page-filters__right
+							.page-filters__label Тема:
+							select.page-filters__select
+								option Все новости
+								option Проведенные мероприятия
+								option Ближайшие мероприятия
+								option Презентации
+								option Инновации
+
+
+			.publications.publications--bg-purple
+				.container
+					ul.publications__list
+						each i in [1,2,3,4,5,6,7,8,9,10]
+							li.publications__item.publication
+								.publication__date
+									svg.svg-calendar
+										use(xlink:href="#17--calendar")
+									span 23 августа 2018
+								p.publication__text Спрос на лаборатории огромный, инноваторы есть, надо расширяться – в технопарке «Университетский» открылась конференция изобретателей России
+
+								.publication__link
+									svg.svg-link
+										use(xlink:href="#20--link")
+									a(href="#")  https://newdaynews.ru/ekb/636335.html
+
+
+			.container
+				.pagination
+					a(href='#').pagination__arrow
+						svg
+							use(xlink:href="#2--arrow_left")
+					ul.pagination__list
+						li.pagination__item.is-current
+							span.pagination__link 1
+						li.pagination__item
+							span.pagination__link 2
+						li.pagination__item
+							span.pagination__link 3
+						li.pagination__item
+							span.pagination__link ...
+						li.pagination__item
+							span.pagination__link 12
+					a(href='#').pagination__arrow
+						svg
+							use(xlink:href="#2--arrow_right")
+
+
+
+		include partails/footer.pug
+		include partails/scripts.pug
+
+
+

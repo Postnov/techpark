@@ -1,21 +1,64 @@
-@import 'partails/normalize.scss';
-@import 'partails/media-mixin.scss';
+@import 'base/vars.scss';
+@import 'base/media-mixin.scss';
 
-body{
-    critical: this;
-    color: red;
-    font-size: 13px;
+@import 'libs/bootstrap.scss';
 
-    @include media-mobile {
-        font-size: 5px;
-    }
-}
+//base
+@import 'base/base.scss';
+@import 'base/normalize.scss';
+@import 'base/fonts.scss';
+@import 'base/page.scss';
+@import 'base/helpers.scss';
+
+// //libs
+@import 'libs/slick.scss';
+@import 'libs/jquery-styles.scss';
+@import 'libs/fancybox.scss';
+
+//components
+
+@import 'base/prev-dev.scss';
+// @import 'components/header.scss';
+// @import 'components/footer.scss';
 
 
-p{
-    font-size: 20px;
 
-    @include media-mobile {
-        font-size: 15px;
-    }
-}
+@import 'components/forms.scss';
+@import 'components/services.scss';
+@import 'components/tabs-progress.scss';
+@import 'components/breadcrumb.scss';
+@import 'components/worker.scss';
+@import 'components/person.scss';
+@import 'components/page-sidebar.scss';
+@import 'components/inner-banner.scss';
+@import 'components/alert-block.scss';
+@import 'components/documents.scss';
+@import 'components/photogallery.scss';
+@import 'components/dropdown-block.scss';
+@import 'components/team.scss';
+@import 'components/tabs.scss';
+@import 'components/grid-features.scss';
+@import 'components/job.scss';
+@import 'components/grid-numbers.scss';
+@import 'components/dropdown-section.scss';
+@import 'components/video-block.scss';
+@import 'components/comments-block.scss';
+@import 'components/events.scss';
+@import 'components/residents.scss';
+@import 'components/page-banner.scss';
+@import 'components/redirect-grid.scss';
+@import 'components/article.scss';
+@import 'components/search.scss';
+@import 'components/pagination.scss';
+@import 'components/filters.scss';
+@import 'components/videos.scss';
+@import 'components/news.scss';
+@import 'components/publications.scss';
+@import 'components/press-center.scss';
+@import 'components/gallery-slider.scss';
+@import 'components/contacts.scss';
+@import 'components/departments.scss';
+@import 'components/about.scss';
+@import 'components/partners.scss';
+@import 'components/photo-report.scss';
+

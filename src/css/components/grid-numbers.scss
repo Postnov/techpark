@@ -1,0 +1,62 @@
+.grid-numbers {
+    &__list {
+        padding-left: 0;
+        list-style: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 32%;
+        background-color: #fff;
+        margin-bottom: 30px;
+        text-align: center;
+        padding: 40px 30px 20px;
+        box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.1);
+
+        @include _768 {
+            width: 49%;
+        }
+
+        @include _480 {
+            width: 100%;
+        }
+    }
+    &__number {
+        font-size: 38px;
+        font-weight: 400;
+        font-weight: bold;
+
+        background-image: linear-gradient(to right, #7451ab 0%, #6377e4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        color: #362068;
+
+        .top-number {
+            position: relative;
+            top: -15px;
+            left: -10px;
+            font-size: 20px;
+            background-image: inherit;
+            -webkit-background-clip: inherit;
+            -webkit-text-fill-color: inherit;
+        }
+
+        &::after {
+            content: '';
+            margin: 28px 0 20px;
+            display: block;
+            height: 1px;
+            background-color: #d8e0f7;
+        }
+    }
+    &__text {
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1.3;
+        color: #362068;
+    }
+}

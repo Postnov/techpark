@@ -1,0 +1,157 @@
+doctype html
+html(lang="ru")
+	include partails/head.pug
+	body
+
+		include partails/header.pug
+
+		.inner-top
+			img.inner-top__img(src="images/inner-top-img.png" alt="")
+
+		.page
+			.page__container.page__container--inner.container
+				.page__content
+					.page__header.page-header
+						.page-header__breadcrumbs.page-breadcrumbs
+							ul
+								li
+									a(href='#') Главная
+								li
+									a(href='#') Услуги Технопарка
+								li
+									span Инжиниринговый центр
+						.page-header__content
+							.page-header__subtitle Технопарк высоких технологий Свердловской области
+							.page-header__title Название услуги
+
+
+					.block-banner
+						img.block-banner__img(src="images/inner-banner.jpg" alt="")
+						.block-banner__content
+							p.block-banner__title Заголовок баннера для услуги
+							p.block-banner__text.
+								Это центр компьютерного инжиниринга, направленный на решение производственных задач,
+								связанных с разработкой или оптимизацией существующих изделий, технологических процессов
+								на основе задания Заказчика.
+							.block-banner__buttons
+								a.block-banner__btn.btn.btn--yellow(href="#")
+									.btn__inner #[span Задать вопрос]
+								a.block-banner__btn.btn.btn--transparent(href='#')
+									.btn__inner #[span Задать вопрос]
+
+					.text-block
+
+						h3.purple-color Здесь можно разместить текст для описания Услуги.
+						p.
+							Здесь можно разместить текст для описания Услуги и компетенции Технопарка. Например, несколько абзацев:
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+
+
+					.alert-block
+						svg.alert-block__img
+							use(xlink:href="#13--important")
+						.alert-block__content
+							p.alert-block__title Блок для выделения важной информации
+							p.alert-block__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+
+					.text-block
+
+						h3 Маркированный список
+						p.
+							felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+
+						ul
+							li Компьютерное проектирование,
+							li обратный инжиниринг,
+							li аддитивные технологии,
+							li промышленный дизайн,
+							li определение свойств материалов,
+							li комплексный анализ конструкций на эксплуатационные нагрузки и их оптимизация,
+							li разработка или оптимизация технологических процессов производства, таких как сварка и термообработка, литье, механическая обработка, композиционные материалы, обработка металлов давлением, течение газов и жидкостей.
+
+						p и еще такой:
+
+
+						ol
+							li Компьютерное проектирование,
+							li обратный инжиниринг,
+							li аддитивные технологии,
+							li промышленный дизайн,
+							li определение свойств материалов,
+							li комплексный анализ конструкций на эксплуатационные нагрузки и их оптимизация,
+							li разработка или оптимизация технологических процессов производства, таких как сварка и термообработка, литье, механическая обработка, композиционные материалы, обработка металлов давлением, течение газов и жидкостей.
+
+
+					.text-block
+						h3 Документы по услуге
+
+
+					.documents
+						ul.documents__list
+							each item in documents
+								li.documents__item
+									svg(class="documents__icon svg-icon-" + item.img)
+										use(xlink:href="#8--" + item.img)
+									.documents__content
+										a.documents__name(href="#" title="Скачать документ")=item.name
+										span.documents__size=item.size
+
+					.text-block
+						h3 Фотогалерея
+
+					.photogallery.js-photogallery-slider
+						.photogallery__main
+							.photogallery__counter.photogallery-counter.js-slider-counter
+								.photogallery-counter__current.js-slider-current 1
+								span /
+								.photogallery-counter__all.js-slider-all 1
+							.photogallery__slider-main.js-photogallery-main-slider
+								each slide in [1,2,3,4,1,2,3]
+									.photogallery__slide.photogallery-slide
+										img.photogallery-slide__img(src="images/photogallery-img.jpg" alt="")
+										p.photogallery-slide__text Возможность добраться на общественном тарнспорте, большая парковка,территория с чистым воздухом в черте города
+							svg.photogallery__arrow-prev.js-photogallery-prev
+								use(xlink:href="#5--arrow_left")
+							svg.photogallery__arrow-next.js-photogallery-next
+								use(xlink:href="#5--arrow_right")
+
+
+						.photogallery__slider-thumb.js-photogallery-thumb-slider
+							each thumb in [1,2,3,4,1,2,3]
+								.photogallery__thumb.photogallery-thumb
+									.photogallery-thumb__img-wrapp
+										img.photogallery-thumb__img(src="images/thumb-img-"+thumb+".jpg" alt="")
+
+
+					.text-block
+						h3 Информация в табличном формате
+						p.
+							На странице здесь и любой другой можно установить таблицу с любым числом столбцов и колонок. Таблица автоматически будет форматироваться по стилям, которые будут заданы на этапе верстке.
+
+						.js-scroll-parent.js-scroll-container
+							.js-scroll-arrow
+							table
+								tbody
+									tr
+										each i in [1,2,3,4]
+											th Заголовок #{i}
+
+									each row in [1,2,3,4]
+										tr
+											each i in [1,2,3,4]
+												td Строка #{i}
+
+
+						a.arrow-link.arrow-link--next(href="#")
+							svg.svg-arrow-left
+								use(xlink:href="#2--arrow_left")
+							span Назад к списку услуг
+
+
+
+				include partails/sidebar-1.pug
+
+
+
+		include partails/footer.pug
+		include partails/scripts.pug

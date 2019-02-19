@@ -1,0 +1,48 @@
+.search {
+    &__block {
+        background-color: #5c70d6;
+        padding: 38px 70px;
+
+        @include _600 {
+            padding: 15px 35px;
+        }
+
+        @include _350 {
+            padding: 10px;
+        }
+    }
+
+    &__redirect {
+        margin-top: 40px;
+        padding: 120px 0;
+        background-image: url('../images/inner-content-bg.png');
+    }
+}
+
+.search-field {
+    position: relative;
+
+    &__input {
+        background-color: #fbfcfe;;
+        width: 100%;
+
+        padding: 23px 35px;
+        border: none;
+    }
+    &__button {
+        background-color: transparent;
+
+        border: none;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+
+        svg {
+            width: 20px;
+            height: 21px;
+            fill: #7452ac;
+            stroke: #7452ac;
+        }
+    }
+}

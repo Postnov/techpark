@@ -1,0 +1,46 @@
+.alert-block {
+    box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.1);
+    background-color: #362068;
+    padding: 37px 40px;
+    color: #fff;
+    margin: 40px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    &__link {
+        margin: 22px 0;
+        color: #ffd32b;
+    }
+
+    &__img {
+        margin-right: 5%;
+        width: 15%;
+
+        @include _768 {
+            width: 150px;
+            margin: 0 auto 30px;
+        }
+    }
+    &__content {
+        width: 80%;
+
+        @include _768 {
+            width: 100%;
+        }
+    }
+    &__title {
+        color: #ffd32b;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+    &__text {
+        color: #fff;
+        font-size: 15px;
+        line-height: 1.6;
+        margin: 0;
+    }
+}

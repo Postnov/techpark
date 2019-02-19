@@ -1,0 +1,63 @@
+.documents {
+    padding: 20px 0;
+
+    &__list {
+        padding-left: 0;
+        list-style: none;
+        margin: 0;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 31%;
+        margin-right: 3.5%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        max-width: 70%;
+
+        margin-bottom: 33px;
+
+        &--wide {
+            width: 80%;
+        }
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+
+        @include _768 {
+            width: 48%;
+            margin-right: 0;
+        }
+
+        @include _480 {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    &__icon {
+        display: inline-block;
+        margin-right: 17px;
+    }
+    &__content {
+        display: inline-block;
+        width: calc(100% - 65px);
+    }
+    &__name {
+        color: #1a1238;
+        font-size: 15px;
+        line-height: 1.2;
+        margin-bottom: 8px;
+        display: block;
+    }
+    &__size {
+        color: #999999;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}

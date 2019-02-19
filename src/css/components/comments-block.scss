@@ -1,0 +1,65 @@
+.comments-block {
+    &__list {
+        padding-left: 0;
+        list-style: none;
+        margin: 0;
+    }
+    &__item {
+        &:not(:last-child) {
+            border-bottom: 1px solid #d8e0f7;;
+        }
+    }
+}
+
+.comment {
+    color: #666666;
+    padding: 27px 0;
+
+    .svg-user {
+        fill: #999999;
+        width: 11px;
+        height: 14px;
+    }
+    .svg-calendar-mini {
+        fill: #999999;
+        width: 12px;
+        height: 12px;
+    }
+
+    .svg-user,
+    .svg-calendar-mini {
+        margin-right: 7px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__text {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    &__info {
+        margin-top: 21px;
+        color: #999999;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+    }
+    &__person {
+        margin-right: 80px;
+        display: flex;
+        align-items: center;
+    }
+    &__date {
+        display: flex;
+        align-items: center;
+
+        @include _480 {
+            width: 100%;
+            display: block;
+            margin-top: 10px;
+        }
+    }
+}

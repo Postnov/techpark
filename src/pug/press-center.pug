@@ -1,0 +1,139 @@
+doctype html
+html(lang="ru")
+	include partails/head.pug
+	body
+
+		include partails/header.pug
+
+		.inner-top
+			img.inner-top__img(src="images/inner-top-img.png" alt="")
+
+		.page.page--bg-white.press-center-page
+			.page__container.page__container--inner.container
+				.page__content
+					.page__header.page-header.page-header--inline
+						.page-header__breadcrumbs.page-breadcrumbs
+							ul
+								li
+									a(href='#') Главная
+								li
+									span Пресс-центр
+						.page-header__content
+							.page-header__subtitle Технопарк высоких технологий Свердловской области
+							.page-header__title Пресс-центр
+
+
+					.news.press-center__news
+						h2.press-center__title Свежие новости
+						.news__list
+							.row
+								each i in [1,2,3]
+									.col-md-4.col-sm-6.col-xs-12
+										a.news__item(href="#")
+											.news__image
+												img(src="images/news-"+i+".jpg" width="360" height="300" alt="")
+											.news__content
+												.news__hashtag  #Новости
+												.news__description
+													.news__date  3 ноября 2018
+													.news__title-news  Десант сколково в технопарке «Университетском»
+													.news__text
+														| Остается чуть более трех суток для регистрации желающих участвовать в Школе «Навигатор инноватора». Мероприятие организовано Фондом Сколково, Открытым университетом Сколково и Технопарком «Университетский». Регистрация производится на сайте Открытого университета Сколково.
+													.news__details  Подробнее
+						.text-center.mt-4
+							a.btn(href="#")
+								span.btn__inner Все новости
+
+
+
+
+			.press-center__articles.articles
+				.container
+					h2.press-center__title.color-white Свежие статьи
+					.articles__list
+						each i in [1,2]
+							article.articles__item.article
+								.article__img-wrapp
+									img.article__img(src="images/article-img-"+i+".jpg", alt="")
+								.article__content
+									a.article__link(href="#") #[h2.article__title Навигатор Инноватора: успевайте подать заявку]
+									p.article__text У вас есть проект или идея? Есть большое желание реализовать это, но нет возможности? Записывайтесь на полезное и интересное мероприятие Остается чуть более трех суток для регистрации желающих участвовать в Школе «Навигатор инноватора».
+									.article__info
+										a.article__link Подробнее
+										.article__tags
+											a(href="#") #Екатеринбург
+											a(href="#") #Тег 2
+											a(href="#") #Тег 3
+					.text-center.mt-4
+						a.btn.btn--yellow(href="#")
+							span.btn__inner Все статьи
+
+
+
+			.videos.press-center__videos
+				.container
+					h2.press-center__title Свежие видеоролики
+					ul.videos__list
+						each i in [1,2,1]
+							li.videos__item.video
+								img.video__img(src="images/video-img-"+i+".png", alt="")
+								a.video__play-icon(data-fancybox href="https://www.youtube.com/watch?v=-5JVZqXvMy0") Смотреть
+								.video__content
+									.video__tags
+										a(href="#") #IT
+										a(href="#") #Навигатор
+
+									.video__panel
+										.video__text Технопарк: новое видео о конференции
+										.video__info
+											.video__date 13 ноября 2018
+											.video__time 30:14
+					.text-center.mt-4
+						a.btn(href="#")
+							span.btn__inner Все видеоролики
+
+
+			.gallery.press-center__gallery
+				.container
+					h2.press-center__title Свежие фото
+					//slider
+					.press-center__gallery-slider.gallery-slider
+						.gallery-slider__slider.js-gallery-sm-slider
+							each slide in [1,2,3,4,1,2,3]
+								a.gallery-slider__thumb.gallery-slide(data-fancybox="gallery-slider" href="images/thumb-img-"+slide+".jpg")
+									.gallery-slide__img-wrapp
+										img.gallery-slide__img(src="images/thumb-img-"+slide+".jpg" alt="")
+						svg.gallery-slider__arrow-prev.js-gallery-sm-prev
+							use(xlink:href="#5--arrow_left")
+						svg.gallery-slider__arrow-next.js-gallery-sm-next
+							use(xlink:href="#5--arrow_right")
+
+					.text-center.mt-4
+						a.btn(href="#")
+							span.btn__inner Все фото
+
+
+
+			.publication.press-center__publication.purple-bg
+				.container
+					h2.press-center__title.color-white Свежие публикации СМИ о нас
+					ul.publications__list
+						each i in [1,2,3,4,5,6]
+							li.publications__item.publication
+								.publication__date
+									svg.svg-calendar
+										use(xlink:href="#17--calendar")
+									span 23 августа 2018
+								p.publication__text Спрос на лаборатории огромный, инноваторы есть, надо расширяться – в технопарке «Университетский» открылась конференция изобретателей России
+
+								.publication__link
+									svg.svg-link
+										use(xlink:href="#20--link")
+									a(href="#")  https://newdaynews.ru/ekb/636335.html
+
+					.text-center.mt-4
+						a.btn.btn--yellow(href='#')
+							span.btn__inner Все публикации
+
+		include partails/footer.pug
+		include partails/scripts.pug

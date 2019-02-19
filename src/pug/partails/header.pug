@@ -1,0 +1,222 @@
+include vars.pug
+
+include vect-sprite.pug
+
+header.header
+	.header__top-line
+		.header__big-container
+			.social.header__social
+				ul.social__list
+					li.social__item
+						a.social__icon.social__icon_facebook
+							.visually-hidden Фейсбук
+							svg.svg.svg-facebook
+								use(xlink:href="#svg-icon-facebook")
+					li.social__item
+						a.social__icon.social__icon_vk
+							.visually-hidden Вконтакте
+							svg.svg.svg-vk
+								use(xlink:href="#svg-icon-vk")
+					li.social__item
+						a.social__icon.social__icon_twitter
+							.visually-hidden Твиттер
+							svg.svg.svg-twitter
+								use(xlink:href="#svg-icon-twitter")
+			.header__language
+				.header__text-language Выберите язык:
+				a.header__item-language(href="#") EN
+				a.header__item-language.header__item-language_active(href="#") РУС
+	nav.header-menu
+		.header__big-container
+			a.header-menu__logo(href="#")
+				svg(height="66" width="66" fill="#fff")
+					use(xlink:href="#32--techno-logo")
+				span
+					| Технопарк
+					br
+					|               высоких технологий
+					br
+					|               Свердловской области
+			.header-menu__row
+				.header-menu__item
+					a.header-menu__link О технопарке
+					.header-menu__drop-level.header-drop-level
+						.container.header-drop-level__container
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg
+										use(xlink:href="#svg-icon-sub-menu-1")
+									a.header-menu__drop-link(href="#") Миссия Технопарка
+
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg
+										use(xlink:href="#svg-icon-sub-menu-2")
+									a.header-menu__drop-link(href="#") Руководство (команда)
+
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg
+										use(xlink:href="#svg-icon-sub-menu-3")
+									a.header-menu__drop-link(href="#") Экспертный совет
+
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg
+										use(xlink:href="#svg-icon-sub-menu-4")
+									a.header-menu__drop-link(href="#") Информация #[br] о технопарке
+
+						.header-menu__news
+							.container
+								.row.justify-content-center
+									.col-sm-6.col-lg-3
+										a.header-menu__news-item.header-menu__news-item_document
+											| Документы
+											svg.svg.svg-folder
+												use(xlink:href="#svg-icon-folder")
+									.col-sm-6.col-lg-3
+										a.header-menu__news-item.header-menu__news-item_subscription
+											| Подписка на новости
+											svg.svg.svg-news
+												use(xlink:href="#svg-icon-news")
+				.header-menu__item
+					a.header-menu__link(href="#") Услуги технопарка
+					.header-menu__drop-level.header-drop-level
+						.container.header-drop-level__container
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg.svg-services-1
+											use(xlink:href="#33--services--netbook")
+									a.header-menu__drop-link(href="#") Инжинирнговый #[br] центр
+
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg.svg-servides-rocket
+											use(xlink:href="#33--services--rocket")
+									a.header-menu__drop-link(href="#") Региональный центр #[br] поддержки #[br] инноваций
+
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg.svg-servides-gears
+											use(xlink:href="#33--services--gears")
+									a.header-menu__drop-link(href="#") Сервисный центр
+
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg.svg-servides-gears
+											use(xlink:href="#33--services--business")
+									a.header-menu__drop-link(href="#") Бизнес-инкубатор
+
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg.svg-servides-gears
+											use(xlink:href="#33--services--covorcing")
+									a.header-menu__drop-link(href="#") Коворкинг
+
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg.svg-servides-gears
+											use(xlink:href="#33--services--skol")
+									a.header-menu__drop-link(href="#") Региональный #[br] оператор #[br] Сколково
+
+				.header-menu__item
+					a.header-menu__link(href="#") Резиденты
+					.header-menu__drop-level.header-drop-level
+						.container.header-drop-level__container
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg.svg-residents-group
+											use(xlink:href="#33--residents--group")
+									a.header-menu__drop-link(href="#") Перечень резидентов
+
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg.svg-residents-hands
+											use(xlink:href="#33--residents--hands")
+									a.header-menu__drop-link(href="#") Как стать резидентом
+
+				.header-menu__item
+					a.header-menu__link(href="#") Мероприятия
+					.header-menu__drop-level.header-drop-level
+						.container.header-drop-level__container
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg.svg-events-calendar
+											use(xlink:href="#33--events--calendar")
+									a.header-menu__drop-link(href="#") Перечень резидентов
+
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg.svg-events-add
+											use(xlink:href="#33--events--add")
+									a.header-menu__drop-link(href="#") Как стать резидентом
+
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg.svg-events-build
+											use(xlink:href="#33--events--build")
+									a.header-menu__drop-link(href="#") Как стать резидентом
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg.svg-events-slide
+											use(xlink:href="#33--events--slide")
+									a.header-menu__drop-link(href="#") Как стать резидентом
+
+				.header-menu__item
+					a.header-menu__link(href="#") Пресс-центр
+					.header-menu__drop-level.header-drop-level
+						.container.header-drop-level__container
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg.svg-press-center-book
+											use(xlink:href="#33--press-center--book")
+									a.header-menu__drop-link(href="#") Перечень резидентов
+
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg.svg-press-center-document
+											use(xlink:href="#33--press-center--document")
+									a.header-menu__drop-link(href="#") Как стать резидентом
+
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg.svg-press-center-camera
+											use(xlink:href="#33--press-center--camera")
+									a.header-menu__drop-link(href="#") Как стать резидентом
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg.svg-press-center-video-player
+											use(xlink:href="#33--press-center--video-player")
+									a.header-menu__drop-link(href="#") Как стать резидентом
+				.header-menu__item
+					a.header-menu__link(href="#") Контакты
+					.header-menu__drop-level.header-drop-level
+						.container.header-drop-level__container
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg.svg-contacts-chat
+											use(xlink:href="#33--contacts--chat")
+									a.header-menu__drop-link(href="#") Перечень резидентов
+
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg.svg-contacts-map
+											use(xlink:href="#33--contacts--map")
+									a.header-menu__drop-link(href="#") Как стать резидентом
+
+							.header-drop-level__item
+								.header-menu__drop-item
+									svg.svg.svg-contacts-phone-book
+											use(xlink:href="#33--contacts--phone-book")
+									a.header-menu__drop-link(href="#") Как стать резидентом
+			form.header-menu__form(action="")
+				label.header-menu__search
+					input(type="text" placeholder="Поиск в технопарке...")
+					svg.svg.svg-loope
+						use(xlink:href="#svg-icon-loope")
+				button.header-menu__close-search(type="button")
+					span.visually-hidden Закрыть форму поиска
+			.gamburger
+				span.gamburger-line1
+				span.gamburger-line2
+				span.gamburger-line3

@@ -1,0 +1,33 @@
+.block-banner {
+    padding: 30px 0;
+
+    &__img {
+        width: 100%;
+    }
+
+    &__content {
+        background-color: #5c70d6;
+        color: #fff;
+        padding: 30px 35px;
+    }
+
+    &__title {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 28px;
+    }
+
+    &__text {
+        margin: 0;
+    }
+
+    &__buttons {
+        margin-top: 35px;
+    }
+
+    &__btn {
+        padding: 20px 45px;
+
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,237 @@
+.page-events {
+    .page-header__content {
+        background-image: linear-gradient(to bottom, #fff 35%, transparent 100%);
+        background-color: transparent;
+        max-width: 80%;
+    }
+}
+
+
+.choose-month {
+    $this: &;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding: 28px 35px;
+    background-color: #fff;
+
+    &:hover {
+        #{$this}__list {
+            display: block;
+        }
+    }
+
+
+    @include _600 {
+        position: relative;
+        display: inline-flex;
+        margin-bottom: 30px;
+        padding: 14px 28px;
+    }
+
+    &__calendar {
+        width: 32px;
+        height: 35px;
+        fill: url(#workGradient);
+    }
+    &__text  {
+        margin: 0 10px;
+        color: #5a6dd2;
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.2;
+
+        border-bottom: 1px dotted #c8ceeb;
+        padding-bottom: 2px;
+    }
+    &__arrow  {
+        width: 17px;
+        height: 12px;
+        fill: #c0c6d8;
+    }
+    &__list {
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+        background-color: #fff;
+
+        padding-left: 0;
+        margin: 0;
+        list-style: none;
+
+        box-shadow: 0 6px 10px -2px rgba(0, 0, 0, .3);
+    }
+    &__item {}
+    &__link {
+        display: inline-block;
+        padding: 12px 17px;
+        width: 100%;
+
+        &:hover {
+            background-color: #ffd32b;
+            color: #444;
+        }
+
+        @include _600 {
+            padding: 16px;
+        }
+    }
+}
+
+.event-d-info {
+    margin-bottom: 30px;
+
+    svg {
+        fill: url(#workGradient);
+        width: 40px;
+    }
+
+    .svg-calendar {
+        height: 35px;
+    }
+    .svg-time {
+        height: 34px;
+    }
+    .svg-place {
+        height: 35px;
+    }
+
+    &__item {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 12px 0;
+    }
+    &__img {
+        font-size: 16px;
+        line-height: 1.25;
+        margin-right: 19px;
+    }
+    &__title {
+        color: #5a6dd2;
+        font-weight: 700;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    &__value {
+        color: #1a1238;
+        font-size: 15px;
+        font-weight: 400;
+    }
+}
+
+
+.events {
+    &__list {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+    &__item {
+        width: 48%;
+        margin-bottom: 25px;
+
+        &--wide {
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        @include _600 {
+            width: 100%;
+        }
+    }
+}
+
+
+.event {
+    $event: &;
+
+    &--sidebar {
+        #{$event}__content {
+            padding: 20px 10px 20px 0;
+        }
+
+        #{$event}__name {
+            font-size: 15px;
+        }
+    }
+
+
+    &--wide {
+        #{$event}__content {
+            padding: 36px 30px 30px;
+            background-color: #5c70d6;
+            color: #fff;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 13px;
+        line-height: 1;
+    }
+
+    &__text {
+        margin-bottom: 10px;
+    }
+
+    &__link {
+        color: #fff;
+        border-bottom: 1.2px dotted;
+
+        &:hover {
+            border-bottom: none;
+        }
+    }
+
+    &__content {
+        position: relative;
+        padding: 25px 20px;
+        background-color: #fff;
+    }
+    &__name {
+        color: #211f53;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.25;
+        text-decoration: none;
+        display: block;
+    }
+    &__date {
+        opacity: 0.98;
+        position: absolute;
+        top: -57px;
+        left: 0;
+
+        color: #5a6dd2;
+        font-size: 11px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 2.2px;
+        padding: 23px 25px;
+        background-color: #fff;
+        display: inline-block;
+    }
+}
